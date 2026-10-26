@@ -1,0 +1,231 @@
+{
+  "data": {
+    "rows_raw": 3676,
+    "rows_clean": 3673,
+    "columns": 49,
+    "diagnoses": 349,
+    "class_share": {
+      "Low": 0.478,
+      "Medium": 0.359,
+      "High": 0.163
+    }
+  },
+  "selected": {
+    "model": "Random forest (tuned)",
+    "feature_set": "FS3 + archive knowledge",
+    "uses_DiscomfortLevel": true,
+    "rf_tuned_params": {
+      "min_samples_leaf": 3,
+      "max_depth": 10,
+      "max_features": 0.5
+    }
+  },
+  "cv_development": {
+    "macro_f1": 0.8882,
+    "macro_f1_sd": 0.002,
+    "recall_high": 0.9193,
+    "recall_high_sd": 0.0142,
+    "under_triage": 0.0291,
+    "over_triage": 0.0701,
+    "accuracy": 0.9008,
+    "roc_auc_ovr": 0.9851
+  },
+  "holdout_test": {
+    "metrics": {
+      "accuracy": 0.9082,
+      "balanced_acc": 0.9181,
+      "macro_f1": 0.8969,
+      "recall_low": 0.914,
+      "recall_medium": 0.8736,
+      "recall_high": 0.9667,
+      "under_triage": 0.0233,
+      "over_triage": 0.0685
+    },
+    "ci95": {
+      "estimate": {
+        "macro_f1": 0.8969,
+        "recall_high": 0.9667,
+        "under_triage": 0.0233,
+        "over_triage": 0.0685
+      },
+      "ci_low": {
+        "macro_f1": 0.8691,
+        "recall_high": 0.9327,
+        "under_triage": 0.0127,
+        "over_triage": 0.0517
+      },
+      "ci_high": {
+        "macro_f1": 0.922,
+        "recall_high": 0.9926,
+        "under_triage": 0.0336,
+        "over_triage": 0.0852
+      }
+    }
+  },
+  "without_DiscomfortLevel_cv": {
+    "macro_f1": 0.7559,
+    "red_recall": 0.9144
+  },
+  "with_DiscomfortLevel_cv": {
+    "macro_f1": 0.8882,
+    "red_recall": 0.9193
+  },
+  "patient_level_argmax": {
+    "patients": 3000,
+    "red patients": 490,
+    "red recall": 0.8979591836734694,
+    "under-triage": 0.027333333333333334,
+    "over-triage": 0.051,
+    "accuracy": 0.9216666666666666,
+    "macro-F1": 0.897452451995081
+  },
+  "patient_level_rule": {
+    "patients": 3000,
+    "red patients": 490,
+    "red recall": 0.7346938775510204,
+    "under-triage": 0.7013333333333334,
+    "over-triage": 0.017333333333333333,
+    "accuracy": 0.2813333333333333,
+    "macro-F1": 0.3711101102488297
+  },
+  "patient_level_cost_sensitive": {
+    "patients": 3000,
+    "red patients": 490,
+    "red recall": 0.9897959183673469,
+    "under-triage": 0.004666666666666667,
+    "over-triage": 0.09266666666666666,
+    "accuracy": 0.9026666666666666,
+    "macro-F1": 0.8795845629854644
+  },
+  "hidden_urgency_share": 0.472,
+  "six_sigma": {
+    "model (argmax)": {
+      "opportunities (red patients)": 490,
+      "defects (red triaged lower)": 50,
+      "DPMO": 102041,
+      "sigma level": 2.77,
+      "sigma 95% CI": "[2.47, 3.17]",
+      "any under-triage (all patients)": "2.7%"
+    },
+    "red-flag rule": {
+      "opportunities (red patients)": 490,
+      "defects (red triaged lower)": 130,
+      "DPMO": 265306,
+      "sigma level": 2.13,
+      "sigma 95% CI": "[1.86, 2.41]",
+      "any under-triage (all patients)": "70.1%"
+    }
+  },
+  "six_sigma_cost_sensitive": {
+    "model (argmax)": {
+      "opportunities (red patients)": 490,
+      "defects (red triaged lower)": 50,
+      "DPMO": 102041,
+      "sigma level": 2.77,
+      "sigma 95% CI": "[2.47, 3.17]",
+      "any under-triage (all patients)": "2.7%"
+    },
+    "model (cost-sensitive w'=3)": {
+      "opportunities (red patients)": 490,
+      "defects (red triaged lower)": 5,
+      "DPMO": 10204,
+      "sigma level": 3.82,
+      "sigma 95% CI": "[3.47, 6.00]",
+      "any under-triage (all patients)": "0.5%"
+    }
+  },
+  "review_threshold": 0.05,
+  "decision_weight": {
+    "assumed_w": 10,
+    "w_star": 3
+  },
+  "queue_simulation_minutes": {
+    "FIFO (no priority)": {
+      "red: mean wait (min)": 32.14,
+      "\u00b1 95% CI": 5.98,
+      "red: 90th pct (min)": 71.1,
+      "yellow: mean wait": 32.74,
+      "green: mean wait": 33.25,
+      "all: mean wait": 32.73,
+      "red wait vs FIFO": 0.0
+    },
+    "model (argmax)": {
+      "red: mean wait (min)": 10.33,
+      "\u00b1 95% CI": 1.42,
+      "red: 90th pct (min)": 26.33,
+      "yellow: mean wait": 32.54,
+      "green: mean wait": 114.86,
+      "all: mean wait": 42.09,
+      "red wait vs FIFO": -0.68
+    },
+    "model (cost-sensitive w'=3)": {
+      "red: mean wait (min)": 8.52,
+      "\u00b1 95% CI": 0.98,
+      "red: 90th pct (min)": 21.86,
+      "yellow: mean wait": 33.33,
+      "green: mean wait": 115.78,
+      "all: mean wait": 42.48,
+      "red wait vs FIFO": -0.74
+    },
+    "red-flag rule": {
+      "red: mean wait (min)": 16.35,
+      "\u00b1 95% CI": 2.94,
+      "red: 90th pct (min)": 46.47,
+      "yellow: mean wait": 38.36,
+      "green: mean wait": 40.53,
+      "all: mean wait": 34.93,
+      "red wait vs FIFO": -0.49
+    },
+    "oracle (true level)": {
+      "red: mean wait (min)": 7.92,
+      "\u00b1 95% CI": 0.89,
+      "red: 90th pct (min)": 20.11,
+      "yellow: mean wait": 31.24,
+      "green: mean wait": 135.18,
+      "all: mean wait": 44.19,
+      "red wait vs FIFO": -0.75
+    }
+  },
+  "sensitivity_5_splits": {
+    "macro_f1_mean": 0.8931,
+    "macro_f1_sd": 0.0093,
+    "red_recall_mean": 0.9249,
+    "red_recall_min": 0.9076
+  },
+  "column_verdicts": {
+    "irrelevant / redundant": 22,
+    "significant": 8,
+    "irrelevant given the others": 8,
+    "informative, but NOT available at triage": 4,
+    "irrelevant given the others (redundant with other columns)": 3,
+    "key (not a feature)": 2,
+    "target": 1,
+    "excluded: leakage": 1
+  },
+  "top_groups": {
+    "DiscomfortLevel": {
+      "impact": 0.2699,
+      "verdict": "significant"
+    },
+    "Collapse information (CollapseSymptom, RiskOfCollapse*)": {
+      "impact": 0.2276,
+      "verdict": "significant"
+    },
+    "Examinations (Examination, Examination_2)": {
+      "impact": 0.0492,
+      "verdict": "significant"
+    },
+    "Avdeling (department)": {
+      "impact": 0.0269,
+      "verdict": "significant"
+    },
+    "Probability of critical outcome": {
+      "impact": 0.0243,
+      "verdict": "significant"
+    },
+    "red_flag_score (combined)": {
+      "impact": 0.0029,
+      "verdict": "irrelevant given the others"
+    }
+  }
+}
