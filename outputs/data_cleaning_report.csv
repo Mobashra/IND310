@@ -1,0 +1,14 @@
+step,rows/values affected,action
+Strip leading/trailing blanks,all text cells,str.strip()
+Target: harmonise ' High Hazard' vs 'High Hazard' etc.,3676 rows,mapped to Low / Medium / High
+Target missing,3,rows dropped (no label)
+Probability column: description text in the cell,0,set to missing (spill-over of multi-line cells)
+Probability column: impossible values (<0 or >100),1,set to missing
+Numeric columns stored as text (decimal comma),8 columns,"replace ',' -> '.', convert to float"
+"Booleans (TRUE/FALSE strings, '0' placeholders)","5 columns, 32 '0' placeholders",-> 1/0; '0' placeholder -> missing (CannotTalk: '0' = False)
+Categorical placeholders ('0'),discomfort/mobility 32 rows; collapse_symptom 2456 rows,"'0'->missing (discomfort, mobility); '0'->'None' (collapse symptom)"
+Duplicate rows,8,"kept: identical rows share one diagnosis, hence one CV fold (no leakage)"
+Duplicate / constant / free-text columns,22 columns,not carried into the modelling frame (see §3.1)
+"Examination_2 contains treatment text ('rest.', 'NSAIDs.', 'Cannot be treated.', ...)",134,set to missing (not an examination)
+"Structural missingness (simulator block, same rows in 23 columns)",888,"NOT dropped: numeric -> median + missing-indicator, categorical -> 'missing' (fitted inside the CV folds)"
+Outliers (IQR screen),1385,"kept: values are bounded domain codes (hours, 0-5 scales, USD cost); tree/forest models are robust to them"

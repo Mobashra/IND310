@@ -1,0 +1,55 @@
+{
+  "name": "Health02 triage model (IND310)",
+  "model": "Random forest (tuned)",
+  "feature_set": "FS3 + archive knowledge",
+  "numeric_features": [
+    "interview",
+    "is_main",
+    "complains",
+    "cannot_talk",
+    "shame",
+    "bleeding",
+    "walk_mod",
+    "collapse_start",
+    "collapse_end",
+    "collapse_window",
+    "death_start",
+    "death_end",
+    "has_collapse",
+    "has_death_risk",
+    "immobile",
+    "red_flag_score",
+    "p_crit",
+    "n_exam",
+    "exam_level"
+  ],
+  "categorical_features": [
+    "mobility",
+    "collapse_symptom",
+    "discomfort",
+    "common",
+    "avdeling"
+  ],
+  "uses_DiscomfortLevel": true,
+  "decision_weight_w": 3,
+  "assumed_cost_ratio": 10,
+  "review_threshold_P_red": 0.05,
+  "levels": {
+    "0": "Low / green",
+    "1": "Medium / yellow",
+    "2": "High / red"
+  },
+  "trained_on_rows": 3673,
+  "trained_on_diagnoses": 349,
+  "holdout_macro_f1": 0.8969,
+  "holdout_red_recall": 0.9667,
+  "sklearn": "1.8.0",
+  "seed": 42,
+  "intended_use": "decision support for triage in a SIMULATED hospital archive; human decides",
+  "limitations": [
+    "synthetic/simulated labels",
+    "probabilities not calibrated",
+    "no vital signs",
+    "assumed cost ratio, not clinically validated"
+  ]
+}

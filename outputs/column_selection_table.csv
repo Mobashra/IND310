@@ -1,0 +1,50 @@
+column,group,role,reason
+Diagnosis,Key,ID,Group key for splitting and patient generation; not a feature (the model would memorise diagnoses).
+Symptom,Key,ID,Used to describe patients; 611 levels with ~6 rows each would be memorised.
+Examination,Examination,ARCH,"Turned into counts/flags (n_exam, exam_level)."
+Examination_2,Examination,ARCH,Turned into counts/flags.
+Behandlding,Treatment,TREAT,Consequence of the diagnosis; not known at triage.
+Avdeling,Archive knowledge,ARCH,Related to urgency (Trauma vs Ortho/Emergency); kept as categorical.
+Common/uncommon,Archive knowledge,ARCH,Prior-probability information; cheap to know.
+"Sannsynlighet for kritisk utfall, når symptom",Archive knowledge,ARCH,Directly about criticality; kept (cleaned).
+Kritiskhet kategori,Label,TARGET,Used as the triage level (green / yellow / red).
+Interview reveal,Observable,OBS,Determines which symptoms a nurse sees first; kept.
+Symptom.1,Key,DROP,Duplicate of `Symptom`.
+ICON,Simulator,DROP,"Graphics, irrelevant."
+IsMainSymptom,Observable,OBS,Kept.
+DiscomfortLevel,Observable,OBS,"Strong driver of the label (Low->Low, Medium->Medium); possible near-proxy, tested in an ablation (§4.4)."
+PatientComplains,Observable,OBS,Kept.
+Hazard,Label,PROXY,"Near-copy of the target (agrees on every row where both exist) and 24 % missing -> leakage, excluded."
+PatientMobility,Observable,OBS,Classic triage observation.
+Examination 1,Examination,DROP,Duplicate.
+Examination 2,Examination,DROP,Duplicate.
+Examination 3,Examination,DROP,Almost constant.
+Treatment,Treatment,DROP,Duplicate.
+ShameLevel,Observable,OBS,Kept for screening; expected to be irrelevant.
+WalkAnim,Simulator,DROP,Graphics label; same information as WalkSpeedModifier.
+WalkSpeedModifier,Observable,OBS,Observable gait impairment.
+CollapseSymptom,Observable,OBS,Red-flag information.
+RiskOfCollapseStartHours,Observable,OBS,Time-criticality.
+RiskOfCollapseEndHours,Observable,OBS,Time-criticality.
+CannotTalk,Observable,OBS,Red flag (airway / consciousness).
+RiskOfDeathStartHours,Observable,OBS,Time-criticality; mostly 0.
+RiskOfDeathEndHours,Observable,OBS,Time-criticality; mostly 0.
+CollapseProcedure,Simulator,DROP,"Response in the simulator, not a patient observation; overlaps with CollapseSymptom."
+PlanAllTreatments,Simulator,DROP,Constant column – carries no information.
+BleedingLevel,Observable,OBS,Red flag.
+Behandling (Engelsk),Treatment,DROP,Duplicate of Behandlding / Norwegian translation.
+Behandling (Norsk),Treatment,DROP,Translation.
+Behandling beskrivelse (Engelsk),Text,DROP,Free text.
+Behandling beskrivelse (Norsk),Text,DROP,Free text / translation.
+Krav,Treatment,DROP,"Free text, redundant with Required Room(s)."
+Surgery room,Treatment,TREAT,"Resource need; consequence, not known at triage."
+Diagnoses,Treatment,DROP,Free text about treatments.
+Diagnoses_temp,Treatment,DROP,Almost constant helper.
+Required Room(s),Treatment,TREAT,"Resource need (ICU flag derived); consequence, not known at triage."
+Departement(s),Treatment,DROP,Overlaps with Avdeling; 19 % missing.
+Required Equipment(s),Treatment,DROP,Constant column.
+Legehåndbok,Text/links,DROP,URLs / spreadsheet errors.
+Virtuell sykehus,Text/links,DROP,URLs.
+Kostnader($),Treatment,TREAT,"Resource need; consequence, not known at triage."
+Sykdoms beskrivelse (Engelsk),Text,DROP,Free text.
+Sykdoms beskrivelse (Norsk),Text,DROP,Free text / translation.
