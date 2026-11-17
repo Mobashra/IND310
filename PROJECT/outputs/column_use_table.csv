@@ -1,0 +1,11 @@
+columns,role,use in this project,known when,where
+Symptom name,KEY,used as lookup key,when the symptom is revealed,"§4.1, §5"
+"CannotTalk, PatientMobility, BleedingLevel, WalkSpeedModifier, PatientComplains, ShameLevel",BEDSIDE,model input,"at the desk, by looking at the patient","§4, §5"
+DiscomfortLevel,BEDSIDE,"model input, tested with and without",at the desk; very close to the label,"§4.3, §5.4"
+"CollapseSymptom, RiskOfCollapse*, RiskOfDeath*",PROGNOSIS,upper reference only; deterioration deadline in the queue,only once the symptom is identified,"§4.3, §6"
+"Interview reveal, Examination, Examination_2",REVEAL,NOT a predictor; defines the stage at which a symptom is known,always (it describes how a symptom is found),§3.3
+Percentage (share of cases with the symptom),DX,used to generate patients and in the knowledge-base risk,only with the diagnosis,§5.1
+"Avdeling, Common/uncommon, IsMainSymptom",DX,NOT a predictor; subgroups and department recommendation,only with the diagnosis,"§5.7, §5.9"
+Hazard,LEAK,EXCLUDED (shown once as a leakage demonstration),copy of the label,§4.3
+"Treatment, rooms, surgery, cost",TREAT,EXCLUDED,after the diagnosis,-
+"22 duplicate, constant, free-text and graphics columns",DROP,EXCLUDED,-,-

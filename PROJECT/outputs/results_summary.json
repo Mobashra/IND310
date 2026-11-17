@@ -1,231 +1,1942 @@
 {
-  "data": {
-    "rows_raw": 3676,
-    "rows_clean": 3673,
-    "columns": 49,
-    "diagnoses": 349,
-    "class_share": {
-      "Low": 0.478,
-      "Medium": 0.359,
-      "High": 0.163
-    }
+ "notebook": "Health02_triage_notebook_v4",
+ "seed": 42,
+ "versions": {
+  "pandas": "3.0.1",
+  "numpy": "2.1.3",
+  "scikit-learn": "1.8.0"
+ },
+ "data": {
+  "rows": 3673,
+  "diagnoses": 349,
+  "symptoms": 608,
+  "structure_checks": {
+   "symptom names": 608,
+   "symptoms that always have the same colour": 605,
+   "share of rows whose symptom also appears in another diagnosis": 0.8995371630819493,
+   "symptoms where DiscomfortLevel varies between rows": 0,
+   "symptoms where PatientMobility varies between rows": 0,
+   "share of red among interview-revealed rows": 0.05752212389380531,
+   "share of red among rows NOT revealed by interview": 0.38416175231676497,
+   "share of red rows that are not revealed by interview": 0.7612687813021702,
+   "mean percentage for main symptoms": 100.0,
+   "mean percentage for other symptoms": 64.4883275928052
   },
-  "selected": {
-    "model": "Random forest (tuned)",
-    "feature_set": "FS3 + archive knowledge",
-    "uses_DiscomfortLevel": true,
-    "rf_tuned_params": {
-      "min_samples_leaf": 3,
-      "max_depth": 10,
-      "max_features": 0.5
-    }
+  "workbook_check": null,
+  "duplicates": [
+   {
+    "Diagnosis": "Appendicitis",
+    "Symptom": "Abdominal Cramps",
+    "copies": 2,
+    "colour": "yellow",
+    "department": "general medicine"
+   },
+   {
+    "Diagnosis": "Appendicitis",
+    "Symptom": "Diarrhea",
+    "copies": 2,
+    "colour": "green",
+    "department": "general medicine"
+   },
+   {
+    "Diagnosis": "Appendicitis",
+    "Symptom": "Fever",
+    "copies": 2,
+    "colour": "yellow",
+    "department": "general medicine"
+   },
+   {
+    "Diagnosis": "Conjunctivitis",
+    "Symptom": "Blurred Vision",
+    "copies": 2,
+    "colour": "green",
+    "department": "neurology"
+   },
+   {
+    "Diagnosis": "Conjunctivitis",
+    "Symptom": "Burning Eye",
+    "copies": 2,
+    "colour": "green",
+    "department": "neurology"
+   },
+   {
+    "Diagnosis": "Conjunctivitis",
+    "Symptom": "Itchy Eyes",
+    "copies": 2,
+    "colour": "green",
+    "department": "neurology"
+   },
+   {
+    "Diagnosis": "Conjunctivitis",
+    "Symptom": "Red Eye",
+    "copies": 2,
+    "colour": "green",
+    "department": "neurology"
+   },
+   {
+    "Diagnosis": "Conjunctivitis",
+    "Symptom": "Watery Eyes",
+    "copies": 2,
+    "colour": "green",
+    "department": "neurology"
+   }
+  ],
+  "rows_by_stage": [
+   {
+    "stage": "0 interview (desk)",
+    "green": "1373",
+    "yellow": "970",
+    "red": "143",
+    "rows": "2486",
+    "share red": "0.058"
+   },
+   {
+    "stage": "1 bedside examination",
+    "green": "70",
+    "yellow": "131",
+    "red": "137",
+    "rows": "338",
+    "share red": "0.405"
+   },
+   {
+    "stage": "2 instrument / lab / imaging",
+    "green": "313",
+    "yellow": "217",
+    "red": "319",
+    "rows": "849",
+    "share red": "0.376"
+   }
+  ]
+ },
+ "symptom_level": {
+  "symptoms": 608,
+  "symptoms_with_attributes": 351,
+  "symptoms_always_same_colour": 605,
+  "eligible_model_meets_criteria": false,
+  "cv_best_per_feature_set": [
+   {
+    "features": "S1 bedside",
+    "model": "Random forest",
+    "macro_f1": 0.4868,
+    "red_recall": 0.5185,
+    "under_triage": 0.2083,
+    "over_triage": 0.3083
+   },
+   {
+    "features": "S2 + discomfort",
+    "model": "Random forest",
+    "macro_f1": 0.6347,
+    "red_recall": 0.4383,
+    "under_triage": 0.1917,
+    "over_triage": 0.1476
+   },
+   {
+    "features": "S3 + prognosis",
+    "model": "Logistic regression",
+    "macro_f1": 0.8272,
+    "red_recall": 0.963,
+    "under_triage": 0.1357,
+    "over_triage": 0.0571
+   },
+   {
+    "features": "S4 + Hazard (leak)",
+    "model": "Random forest",
+    "macro_f1": 0.9904,
+    "red_recall": 0.9753,
+    "under_triage": 0.0083,
+    "over_triage": 0.0
+   }
+  ],
+  "holdout": [
+   {
+    "configuration": "Majority class",
+    "macro_f1": 0.2115,
+    "red_recall": 0.0,
+    "under_triage": 0.5352,
+    "over_triage": 0.0,
+    "accuracy": 0.4648,
+    "macro_f1 95% CI": "",
+    "red_recall 95% CI": ""
+   },
+   {
+    "configuration": "Red-flag rule",
+    "macro_f1": 0.437,
+    "red_recall": 0.5714,
+    "under_triage": 0.3803,
+    "over_triage": 0.0563,
+    "accuracy": 0.5634,
+    "macro_f1 95% CI": "",
+    "red_recall 95% CI": ""
+   },
+   {
+    "configuration": "Random forest, S1 bedside",
+    "macro_f1": 0.5325,
+    "red_recall": 0.5714,
+    "under_triage": 0.1408,
+    "over_triage": 0.338,
+    "accuracy": 0.5211,
+    "macro_f1 95% CI": "[0.40, 0.64]",
+    "red_recall 95% CI": "[0.29, 0.83]"
+   },
+   {
+    "configuration": "Random forest, S2 + discomfort",
+    "macro_f1": 0.6565,
+    "red_recall": 0.5714,
+    "under_triage": 0.2394,
+    "over_triage": 0.0704,
+    "accuracy": 0.6901,
+    "macro_f1 95% CI": "[0.52, 0.77]",
+    "red_recall 95% CI": "[0.29, 0.83]"
+   },
+   {
+    "configuration": "Random forest, S3 + prognosis",
+    "macro_f1": 0.7902,
+    "red_recall": 0.9286,
+    "under_triage": 0.169,
+    "over_triage": 0.0423,
+    "accuracy": 0.7887,
+    "macro_f1 95% CI": "[0.70, 0.88]",
+    "red_recall 95% CI": "[0.77, 1.00]"
+   },
+   {
+    "configuration": "Random forest, S4 + Hazard (leak)",
+    "macro_f1": 0.9695,
+    "red_recall": 1.0,
+    "under_triage": 0.0,
+    "over_triage": 0.0282,
+    "accuracy": 0.9718,
+    "macro_f1 95% CI": "[0.91, 1.00]",
+    "red_recall 95% CI": "[1.00, 1.00]"
+   }
+  ],
+  "regression_vs_classification": [
+   {
+    "model": "Ridge regression",
+    "MAE": 0.2429,
+    "R2": 0.7934,
+    "macro_f1": 0.8214,
+    "red_recall": 0.9136,
+    "under_triage": 0.1619,
+    "over_triage": 0.0262,
+    "accuracy": 0.8119
+   },
+   {
+    "model": "RF regressor",
+    "MAE": 0.2312,
+    "R2": 0.7835,
+    "macro_f1": 0.8113,
+    "red_recall": 0.8827,
+    "under_triage": 0.169,
+    "over_triage": 0.0274,
+    "accuracy": 0.8036
+   },
+   {
+    "model": "Random forest (classifier)",
+    "MAE": "",
+    "R2": "",
+    "macro_f1": 0.8107,
+    "red_recall": 0.9506,
+    "under_triage": 0.0881,
+    "over_triage": 0.1345,
+    "accuracy": 0.7774
+   }
+  ],
+  "importance_S3": [
+   {
+    "index": "Complains",
+    "shuffled": -0.0201,
+    "removed and retrained": 0.0101
+   },
+   {
+    "index": "Stage (how it was found)",
+    "shuffled": -0.0178,
+    "removed and retrained": -0.02
+   },
+   {
+    "index": "Shame level",
+    "shuffled": -0.0176,
+    "removed and retrained": 0.0072
+   },
+   {
+    "index": "Mobility",
+    "shuffled": -0.0155,
+    "removed and retrained": -0.006
+   },
+   {
+    "index": "Limping",
+    "shuffled": -0.0001,
+    "removed and retrained": 0.0064
+   },
+   {
+    "index": "Visible bleeding",
+    "shuffled": 0.0,
+    "removed and retrained": 0.0072
+   },
+   {
+    "index": "Cannot talk",
+    "shuffled": 0.0045,
+    "removed and retrained": 0.0088
+   },
+   {
+    "index": "Death risk",
+    "shuffled": 0.0147,
+    "removed and retrained": 0.0067
+   },
+   {
+    "index": "DiscomfortLevel",
+    "shuffled": 0.1479,
+    "removed and retrained": 0.1464
+   },
+   {
+    "index": "Collapse information",
+    "shuffled": 0.3299,
+    "removed and retrained": 0.1874
+   }
+  ],
+  "lookup": [
+   {
+    "rows": "all rows",
+    "n": 3673.0,
+    "symptom is in the table": 0.894,
+    "correct when in the table": 1.0,
+    "red recall when in the table": 1.0,
+    "share red among symptoms NOT in the table": 0.315
+   },
+   {
+    "rows": "revealed by interview (stage 0)",
+    "n": 2486.0,
+    "symptom is in the table": 0.992,
+    "correct when in the table": 1.0,
+    "red recall when in the table": 1.0,
+    "share red among symptoms NOT in the table": 0.033
+   },
+   {
+    "rows": "revealed by examination (stage 1-2)",
+    "n": 1187.0,
+    "symptom is in the table": 0.687,
+    "correct when in the table": 0.999,
+    "red recall when in the table": 1.0,
+    "share red among symptoms NOT in the table": 0.329
+   }
+  ],
+  "no_attribute_symptoms": [
+   {
+    "index": "forest (sees only the stage)",
+    "macro_f1": 0.3029,
+    "red_recall": 0.9101,
+    "under_triage": 0.07,
+    "over_triage": 0.5331,
+    "accuracy": 0.3969
+   },
+   {
+    "index": "default: always yellow",
+    "macro_f1": 0.1743,
+    "red_recall": 0.0,
+    "under_triage": 0.3463,
+    "over_triage": 0.2996,
+    "accuracy": 0.3541
+   },
+   {
+    "index": "default: always red",
+    "macro_f1": 0.1715,
+    "red_recall": 1.0,
+    "under_triage": 0.0,
+    "over_triage": 0.6537,
+    "accuracy": 0.3463
+   }
+  ]
+ },
+ "patient_level": {
+  "share_truly_red": 0.554,
+  "share_red_hidden_at_desk": 0.7274368231046932,
+  "selected_model": "Random forest (leaf 30, features sqrt)",
+  "selected_inputs": "P3 + bedside observation",
+  "w_c1": 3.0,
+  "w_cost": 15.0,
+  "assumed_w": 10,
+  "holdout_auc_red": 0.7985759009841847,
+  "holdout_auc_kb_only": 0.7307751966236204,
+  "holdout_rules": [
+   {
+    "rule": "Keyword rule (HospitalSim)",
+    "red_recall": 0.0234,
+    "red_recall 95% CI": "[0.00, 0.05]",
+    "over_triage": 0.0003,
+    "over_triage 95% CI": "[0.00, 0.00]",
+    "under_triage": 0.9333,
+    "accuracy": 0.0663,
+    "macro_f1": 0.0598,
+    "cost@w=10": 13.5403
+   },
+   {
+    "rule": "Lookup rule",
+    "red_recall": 0.2293,
+    "red_recall 95% CI": "[0.12, 0.34]",
+    "over_triage": 0.0,
+    "over_triage 95% CI": "[0.00, 0.00]",
+    "under_triage": 0.4847,
+    "accuracy": 0.5153,
+    "macro_f1": 0.4472,
+    "cost@w=10": 5.55
+   },
+   {
+    "rule": "Lookup + red flags",
+    "red_recall": 0.4485,
+    "red_recall 95% CI": "[0.31, 0.60]",
+    "over_triage": 0.013,
+    "over_triage 95% CI": "[0.00, 0.04]",
+    "under_triage": 0.372,
+    "accuracy": 0.615,
+    "macro_f1": 0.5496,
+    "cost@w=10": 4.2763
+   },
+   {
+    "rule": "Everybody red",
+    "red_recall": 1.0,
+    "red_recall 95% CI": "[1.00, 1.00]",
+    "over_triage": 0.5013,
+    "over_triage 95% CI": "[0.38, 0.62]",
+    "under_triage": 0.0,
+    "accuracy": 0.4987,
+    "macro_f1": 0.2218,
+    "cost@w=10": 0.5443
+   },
+   {
+    "rule": "Risk model, most likely colour",
+    "red_recall": 0.6918,
+    "red_recall 95% CI": "[0.60, 0.79]",
+    "over_triage": 0.1363,
+    "over_triage 95% CI": "[0.08, 0.19]",
+    "under_triage": 0.2397,
+    "accuracy": 0.624,
+    "macro_f1": 0.5565,
+    "cost@w=10": 3.081
+   },
+   {
+    "rule": "Risk model, cost-sensitive w'=3 (C1)",
+    "red_recall": 0.8824,
+    "red_recall 95% CI": "[0.82, 0.94]",
+    "over_triage": 0.3033,
+    "over_triage 95% CI": "[0.22, 0.39]",
+    "under_triage": 0.0727,
+    "accuracy": 0.624,
+    "macro_f1": 0.4993,
+    "cost@w=10": 1.1047
+   },
+   {
+    "rule": "Risk model, cost-sensitive w'=15 (cost, w=10)",
+    "red_recall": 0.984,
+    "red_recall 95% CI": "[0.96, 1.00]",
+    "over_triage": 0.4423,
+    "over_triage 95% CI": "[0.33, 0.55]",
+    "under_triage": 0.008,
+    "accuracy": 0.5497,
+    "macro_f1": 0.3037,
+    "cost@w=10": 0.551
+   }
+  ],
+  "cv_models": [
+   {
+    "model": "Logistic regression",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8166,
+    "w' at C1": 4.0,
+    "red_recall at C1": 0.9065,
+    "over_triage at C1": 0.2592,
+    "red_recall (most likely colour)": 0.6172,
+    "over_triage (most likely colour)": 0.0832
+   },
+   {
+    "model": "Decision tree",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.7919,
+    "w' at C1": 5.0,
+    "red_recall at C1": 0.9138,
+    "over_triage at C1": 0.272,
+    "red_recall (most likely colour)": 0.5883,
+    "over_triage (most likely colour)": 0.1012
+   },
+   {
+    "model": "Random forest",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8297,
+    "w' at C1": 3.0,
+    "red_recall at C1": 0.9252,
+    "over_triage at C1": 0.262,
+    "red_recall (most likely colour)": 0.7098,
+    "over_triage (most likely colour)": 0.1112
+   },
+   {
+    "model": "Gradient boosting",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8228,
+    "w' at C1": 4.0,
+    "red_recall at C1": 0.9126,
+    "over_triage at C1": 0.2542,
+    "red_recall (most likely colour)": 0.6895,
+    "over_triage (most likely colour)": 0.1302
+   },
+   {
+    "model": "Random forest",
+    "inputs": "P1 lookup inputs",
+    "auc_red": 0.6851,
+    "w' at C1": 8.0,
+    "red_recall at C1": 0.9458,
+    "over_triage at C1": 0.4155,
+    "red_recall (most likely colour)": 0.3603,
+    "over_triage (most likely colour)": 0.0268
+   },
+   {
+    "model": "Random forest",
+    "inputs": "P2 + knowledge base",
+    "auc_red": 0.7989,
+    "w' at C1": 2.5,
+    "red_recall at C1": 0.904,
+    "over_triage at C1": 0.2543,
+    "red_recall (most likely colour)": 0.7071,
+    "over_triage (most likely colour)": 0.1333
+   },
+   {
+    "model": "Random forest",
+    "inputs": "P4 + discomfort",
+    "auc_red": 0.8333,
+    "w' at C1": 2.5,
+    "red_recall at C1": 0.9043,
+    "over_triage at C1": 0.2367,
+    "red_recall (most likely colour)": 0.7151,
+    "over_triage (most likely colour)": 0.11
+   },
+   {
+    "model": "Random forest (leaf 3, features sqrt)",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8296,
+    "w' at C1": 2.5,
+    "red_recall at C1": 0.9012,
+    "over_triage at C1": 0.2563,
+    "red_recall (most likely colour)": 0.7345,
+    "over_triage (most likely colour)": 0.1328
+   },
+   {
+    "model": "Random forest (leaf 30, features sqrt)",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8262,
+    "w' at C1": 3.0,
+    "red_recall at C1": 0.9111,
+    "over_triage at C1": 0.2467,
+    "red_recall (most likely colour)": 0.7025,
+    "over_triage (most likely colour)": 0.1077
+   },
+   {
+    "model": "Random forest (leaf 10, features 0.5)",
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8168,
+    "w' at C1": 3.5,
+    "red_recall at C1": 0.9286,
+    "over_triage at C1": 0.2817,
+    "red_recall (most likely colour)": 0.7077,
+    "over_triage (most likely colour)": 0.1275
+   }
+  ],
+  "input_groups": [
+   {
+    "inputs": "P1 lookup inputs",
+    "auc_red": 0.6851,
+    "over_triage at C1": 0.4155,
+    "red_recall (most likely colour)": 0.3603
+   },
+   {
+    "inputs": "P2 + knowledge base",
+    "auc_red": 0.7989,
+    "over_triage at C1": 0.2543,
+    "red_recall (most likely colour)": 0.7071
+   },
+   {
+    "inputs": "P3 + bedside observation",
+    "auc_red": 0.8297,
+    "over_triage at C1": 0.262,
+    "red_recall (most likely colour)": 0.7098
+   },
+   {
+    "inputs": "P4 + discomfort",
+    "auc_red": 0.8333,
+    "over_triage at C1": 0.2367,
+    "red_recall (most likely colour)": 0.7151
+   }
+  ],
+  "frontier_holdout": [
+   {
+    "w'": 1.0,
+    "macro_f1": 0.5618,
+    "red_recall": 0.6684,
+    "under_triage": 0.234,
+    "over_triage": 0.1333,
+    "accuracy": 0.6327,
+    "cost@w=2": 0.6613,
+    "cost@w=5": 1.4533,
+    "cost@w=10": 2.7733,
+    "cost@w=25": 6.7333
+   },
+   {
+    "w'": 1.5,
+    "macro_f1": 0.5648,
+    "red_recall": 0.7834,
+    "under_triage": 0.143,
+    "over_triage": 0.2113,
+    "accuracy": 0.6457,
+    "cost@w=2": 0.54,
+    "cost@w=5": 1.031,
+    "cost@w=10": 1.8493,
+    "cost@w=25": 4.3043
+   },
+   {
+    "w'": 2.0,
+    "macro_f1": 0.5609,
+    "red_recall": 0.8222,
+    "under_triage": 0.112,
+    "over_triage": 0.241,
+    "accuracy": 0.647,
+    "cost@w=2": 0.492,
+    "cost@w=5": 0.866,
+    "cost@w=10": 1.4893,
+    "cost@w=25": 3.3593
+   },
+   {
+    "w'": 2.5,
+    "macro_f1": 0.5272,
+    "red_recall": 0.8616,
+    "under_triage": 0.085,
+    "over_triage": 0.2807,
+    "accuracy": 0.6343,
+    "cost@w=2": 0.471,
+    "cost@w=5": 0.752,
+    "cost@w=10": 1.2203,
+    "cost@w=25": 2.6253
+   },
+   {
+    "w'": 3.0,
+    "macro_f1": 0.4993,
+    "red_recall": 0.8824,
+    "under_triage": 0.0727,
+    "over_triage": 0.3033,
+    "accuracy": 0.624,
+    "cost@w=2": 0.4673,
+    "cost@w=5": 0.7063,
+    "cost@w=10": 1.1047,
+    "cost@w=25": 2.2997
+   },
+   {
+    "w'": 3.5,
+    "macro_f1": 0.485,
+    "red_recall": 0.8964,
+    "under_triage": 0.0617,
+    "over_triage": 0.3207,
+    "accuracy": 0.6177,
+    "cost@w=2": 0.462,
+    "cost@w=5": 0.663,
+    "cost@w=10": 0.998,
+    "cost@w=25": 2.003
+   },
+   {
+    "w'": 4.0,
+    "macro_f1": 0.4698,
+    "red_recall": 0.9071,
+    "under_triage": 0.0543,
+    "over_triage": 0.3317,
+    "accuracy": 0.614,
+    "cost@w=2": 0.4573,
+    "cost@w=5": 0.6313,
+    "cost@w=10": 0.9213,
+    "cost@w=25": 1.7913
+   },
+   {
+    "w'": 5.0,
+    "macro_f1": 0.433,
+    "red_recall": 0.9285,
+    "under_triage": 0.0413,
+    "over_triage": 0.3563,
+    "accuracy": 0.6023,
+    "cost@w=2": 0.4563,
+    "cost@w=5": 0.5853,
+    "cost@w=10": 0.8003,
+    "cost@w=25": 1.4453
+   },
+   {
+    "w'": 6.0,
+    "macro_f1": 0.3945,
+    "red_recall": 0.9492,
+    "under_triage": 0.0273,
+    "over_triage": 0.3767,
+    "accuracy": 0.596,
+    "cost@w=2": 0.451,
+    "cost@w=5": 0.534,
+    "cost@w=10": 0.6723,
+    "cost@w=25": 1.0873
+   },
+   {
+    "w'": 8.0,
+    "macro_f1": 0.3477,
+    "red_recall": 0.9626,
+    "under_triage": 0.0187,
+    "over_triage": 0.4007,
+    "accuracy": 0.5807,
+    "cost@w=2": 0.4613,
+    "cost@w=5": 0.5173,
+    "cost@w=10": 0.6107,
+    "cost@w=25": 0.8907
+   },
+   {
+    "w'": 10.0,
+    "macro_f1": 0.3275,
+    "red_recall": 0.9713,
+    "under_triage": 0.0143,
+    "over_triage": 0.4203,
+    "accuracy": 0.5653,
+    "cost@w=2": 0.474,
+    "cost@w=5": 0.517,
+    "cost@w=10": 0.5887,
+    "cost@w=25": 0.8037
+   },
+   {
+    "w'": 15.0,
+    "macro_f1": 0.3037,
+    "red_recall": 0.984,
+    "under_triage": 0.008,
+    "over_triage": 0.4423,
+    "accuracy": 0.5497,
+    "cost@w=2": 0.487,
+    "cost@w=5": 0.511,
+    "cost@w=10": 0.551,
+    "cost@w=25": 0.671
+   },
+   {
+    "w'": 25.0,
+    "macro_f1": 0.2683,
+    "red_recall": 0.9967,
+    "under_triage": 0.0017,
+    "over_triage": 0.4707,
+    "accuracy": 0.5277,
+    "cost@w=2": 0.507,
+    "cost@w=5": 0.512,
+    "cost@w=10": 0.5203,
+    "cost@w=25": 0.5453
+   }
+  ],
+  "best_w_by_cost_ratio": {
+   "2": 4.0,
+   "5": 10.0,
+   "10": 15.0,
+   "25": 25.0
   },
-  "cv_development": {
-    "macro_f1": 0.8882,
-    "macro_f1_sd": 0.002,
-    "recall_high": 0.9193,
-    "recall_high_sd": 0.0142,
-    "under_triage": 0.0291,
-    "over_triage": 0.0701,
-    "accuracy": 0.9008,
-    "roc_auc_ovr": 0.9851
-  },
-  "holdout_test": {
-    "metrics": {
-      "accuracy": 0.9082,
-      "balanced_acc": 0.9181,
-      "macro_f1": 0.8969,
-      "recall_low": 0.914,
-      "recall_medium": 0.8736,
-      "recall_high": 0.9667,
-      "under_triage": 0.0233,
-      "over_triage": 0.0685
-    },
-    "ci95": {
-      "estimate": {
-        "macro_f1": 0.8969,
-        "recall_high": 0.9667,
-        "under_triage": 0.0233,
-        "over_triage": 0.0685
-      },
-      "ci_low": {
-        "macro_f1": 0.8691,
-        "recall_high": 0.9327,
-        "under_triage": 0.0127,
-        "over_triage": 0.0517
-      },
-      "ci_high": {
-        "macro_f1": 0.922,
-        "recall_high": 0.9926,
-        "under_triage": 0.0336,
-        "over_triage": 0.0852
-      }
-    }
-  },
-  "without_DiscomfortLevel_cv": {
-    "macro_f1": 0.7559,
-    "red_recall": 0.9144
-  },
-  "with_DiscomfortLevel_cv": {
-    "macro_f1": 0.8882,
-    "red_recall": 0.9193
-  },
-  "patient_level_argmax": {
+  "six_sigma": [
+   {
+    "rule": "Keyword rule (HospitalSim)",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 1461,
+    "DPMO": 976604,
+    "sigma level": -0.49,
+    "sigma 95% CI": "[-1.15, -0.11]",
+    "over-triaged patients per 100": 0.0
+   },
+   {
+    "rule": "Lookup rule",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 1153,
+    "DPMO": 770722,
+    "sigma level": 0.76,
+    "sigma 95% CI": "[0.32, 1.10]",
+    "over-triaged patients per 100": 0.0
+   },
+   {
+    "rule": "Lookup + red flags",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 825,
+    "DPMO": 551471,
+    "sigma level": 1.37,
+    "sigma 95% CI": "[1.01, 1.76]",
+    "over-triaged patients per 100": 1.3
+   },
+   {
+    "rule": "Risk model, most likely colour",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 461,
+    "DPMO": 308155,
+    "sigma level": 2.0,
+    "sigma 95% CI": "[1.76, 2.31]",
+    "over-triaged patients per 100": 13.6
+   },
+   {
+    "rule": "Risk model, cost-sensitive w'=3 (C1)",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 176,
+    "DPMO": 117647,
+    "sigma level": 2.69,
+    "sigma 95% CI": "[2.40, 3.07]",
+    "over-triaged patients per 100": 30.3
+   },
+   {
+    "rule": "Risk model, cost-sensitive w'=15 (cost, w=10)",
+    "red patients (opportunities)": 1496,
+    "defects (red not triaged red)": 24,
+    "DPMO": 16043,
+    "sigma level": 3.64,
+    "sigma 95% CI": "[3.26, 4.38]",
+    "over-triaged patients per 100": 44.2
+   }
+  ],
+  "subgroups": [
+   {
+    "subgroup": "department",
+    "value": "cardiology",
+    "patients": 221,
+    "share red": 0.8824,
+    "red recall": 0.9333,
+    "over-triage": 0.0769,
+    "lookup red recall": 0.0
+   },
+   {
+    "subgroup": "department",
+    "value": "emergency",
+    "patients": 184,
+    "share red": 0.0,
+    "red recall": null,
+    "over-triage": 0.2935,
+    "lookup red recall": null
+   },
+   {
+    "subgroup": "department",
+    "value": "general medicine",
+    "patients": 471,
+    "share red": 0.3121,
+    "red recall": 0.7687,
+    "over-triage": 0.4416,
+    "lookup red recall": 0.1633
+   },
+   {
+    "subgroup": "department",
+    "value": "infectious",
+    "patients": 708,
+    "share red": 0.6158,
+    "red recall": 0.8761,
+    "over-triage": 0.3531,
+    "lookup red recall": 0.1766
+   },
+   {
+    "subgroup": "department",
+    "value": "internal medicine",
+    "patients": 351,
+    "share red": 0.4359,
+    "red recall": 0.8758,
+    "over-triage": 0.3618,
+    "lookup red recall": 0.1176
+   },
+   {
+    "subgroup": "department",
+    "value": "neurology",
+    "patients": 248,
+    "share red": 0.7298,
+    "red recall": 0.7072,
+    "over-triage": 0.0887,
+    "lookup red recall": 0.232
+   },
+   {
+    "subgroup": "department",
+    "value": "ortho",
+    "patients": 453,
+    "share red": 0.2671,
+    "red recall": 1.0,
+    "over-triage": 0.3333,
+    "lookup red recall": 0.562
+   },
+   {
+    "subgroup": "department",
+    "value": "trauma",
+    "patients": 364,
+    "share red": 0.7225,
+    "red recall": 0.9886,
+    "over-triage": 0.2225,
+    "lookup red recall": 0.4335
+   },
+   {
+    "subgroup": "how common",
+    "value": "Common",
+    "patients": 1968,
+    "share red": 0.4705,
+    "red recall": 0.8553,
+    "over-triage": 0.3028,
+    "lookup red recall": 0.1955
+   },
+   {
+    "subgroup": "how common",
+    "value": "Rare",
+    "patients": 109,
+    "share red": 1.0,
+    "red recall": 1.0,
+    "over-triage": 0.0,
+    "lookup red recall": 0.7156
+   },
+   {
+    "subgroup": "how common",
+    "value": "Uncommon",
+    "patients": 923,
+    "share red": 0.4995,
+    "red recall": 0.9089,
+    "over-triage": 0.3402,
+    "lookup red recall": 0.1822
+   },
+   {
+    "subgroup": "revealed symptoms",
+    "value": "0-1",
+    "patients": 110,
+    "share red": 0.4,
+    "red recall": 0.9091,
+    "over-triage": 0.4545,
+    "lookup red recall": 0.0909
+   },
+   {
+    "subgroup": "revealed symptoms",
+    "value": "2",
+    "patients": 102,
+    "share red": 0.3725,
+    "red recall": 0.8158,
+    "over-triage": 0.3529,
+    "lookup red recall": 0.0789
+   },
+   {
+    "subgroup": "revealed symptoms",
+    "value": "3",
+    "patients": 2788,
+    "share red": 0.5072,
+    "red recall": 0.8833,
+    "over-triage": 0.2956,
+    "lookup red recall": 0.2376
+   },
+   {
+    "subgroup": "communication",
+    "value": "can talk",
+    "patients": 2783,
+    "share red": 0.4596,
+    "red recall": 0.8663,
+    "over-triage": 0.327,
+    "lookup red recall": 0.2088
+   },
+   {
+    "subgroup": "communication",
+    "value": "cannot talk",
+    "patients": 217,
+    "share red": 1.0,
+    "red recall": 0.977,
+    "over-triage": 0.0,
+    "lookup red recall": 0.3502
+   },
+   {
+    "subgroup": "visible red flag",
+    "value": "no",
+    "patients": 2358,
+    "share red": 0.3787,
+    "red recall": 0.8197,
+    "over-triage": 0.3859,
+    "lookup red recall": 0.0761
+   },
+   {
+    "subgroup": "visible red flag",
+    "value": "yes",
+    "patients": 642,
+    "share red": 0.9393,
+    "red recall": 0.9751,
+    "over-triage": 0.0,
+    "lookup red recall": 0.4561
+   },
+   {
+    "subgroup": "missing information",
+    "value": "available",
+    "patients": 2994,
+    "share red": 0.498,
+    "red recall": 0.882,
+    "over-triage": 0.3036,
+    "lookup red recall": 0.2274
+   },
+   {
+    "subgroup": "missing information",
+    "value": "none (no attributes)",
+    "patients": 6,
+    "share red": 0.8333,
+    "red recall": 1.0,
+    "over-triage": 0.1667,
+    "lookup red recall": 0.8
+   },
+   {
+    "subgroup": "unknown symptom at desk",
+    "value": "no",
     "patients": 3000,
-    "red patients": 490,
-    "red recall": 0.8979591836734694,
-    "under-triage": 0.027333333333333334,
-    "over-triage": 0.051,
-    "accuracy": 0.9216666666666666,
-    "macro-F1": 0.897452451995081
+    "share red": 0.4987,
+    "red recall": 0.8824,
+    "over-triage": 0.3033,
+    "lookup red recall": 0.2293
+   }
+  ],
+  "five_splits": [
+   {
+    "split": 1,
+    "auc_red": 0.8414,
+    "red_recall": 0.9083,
+    "over_triage": 0.2087,
+    "lookup red_recall": 0.2868,
+    "share red": 0.6253
+   },
+   {
+    "split": 2,
+    "auc_red": 0.8261,
+    "red_recall": 0.9473,
+    "over_triage": 0.2567,
+    "lookup red_recall": 0.3184,
+    "share red": 0.582
+   },
+   {
+    "split": 3,
+    "auc_red": 0.8196,
+    "red_recall": 0.8726,
+    "over_triage": 0.266,
+    "lookup red_recall": 0.3421,
+    "share red": 0.4813
+   },
+   {
+    "split": 4,
+    "auc_red": 0.8251,
+    "red_recall": 0.9136,
+    "over_triage": 0.2907,
+    "lookup red_recall": 0.299,
+    "share red": 0.486
+   },
+   {
+    "split": 5,
+    "auc_red": 0.7323,
+    "red_recall": 0.8688,
+    "over_triage": 0.3487,
+    "lookup red_recall": 0.1975,
+    "share red": 0.4827
+   }
+  ],
+  "known_diagnoses": {
+   "auc_red": 0.9490793258977593,
+   "over_triage at red recall 0.90": 0.09,
+   "red_recall": 0.9028414298808433
   },
-  "patient_level_rule": {
-    "patients": 3000,
-    "red patients": 490,
-    "red recall": 0.7346938775510204,
-    "under-triage": 0.7013333333333334,
-    "over-triage": 0.017333333333333333,
-    "accuracy": 0.2813333333333333,
-    "macro-F1": 0.3711101102488297
-  },
-  "patient_level_cost_sensitive": {
-    "patients": 3000,
-    "red patients": 490,
-    "red recall": 0.9897959183673469,
-    "under-triage": 0.004666666666666667,
-    "over-triage": 0.09266666666666666,
-    "accuracy": 0.9026666666666666,
-    "macro-F1": 0.8795845629854644
-  },
-  "hidden_urgency_share": 0.472,
-  "six_sigma": {
-    "model (argmax)": {
-      "opportunities (red patients)": 490,
-      "defects (red triaged lower)": 50,
-      "DPMO": 102041,
-      "sigma level": 2.77,
-      "sigma 95% CI": "[2.47, 3.17]",
-      "any under-triage (all patients)": "2.7%"
-    },
-    "red-flag rule": {
-      "opportunities (red patients)": 490,
-      "defects (red triaged lower)": 130,
-      "DPMO": 265306,
-      "sigma level": 2.13,
-      "sigma 95% CI": "[1.86, 2.41]",
-      "any under-triage (all patients)": "70.1%"
-    }
-  },
-  "six_sigma_cost_sensitive": {
-    "model (argmax)": {
-      "opportunities (red patients)": 490,
-      "defects (red triaged lower)": 50,
-      "DPMO": 102041,
-      "sigma level": 2.77,
-      "sigma 95% CI": "[2.47, 3.17]",
-      "any under-triage (all patients)": "2.7%"
-    },
-    "model (cost-sensitive w'=3)": {
-      "opportunities (red patients)": 490,
-      "defects (red triaged lower)": 5,
-      "DPMO": 10204,
-      "sigma level": 3.82,
-      "sigma 95% CI": "[3.47, 6.00]",
-      "any under-triage (all patients)": "0.5%"
-    }
-  },
-  "review_threshold": 0.05,
-  "decision_weight": {
-    "assumed_w": 10,
-    "w_star": 3
-  },
-  "queue_simulation_minutes": {
-    "FIFO (no priority)": {
-      "red: mean wait (min)": 32.14,
-      "\u00b1 95% CI": 5.98,
-      "red: 90th pct (min)": 71.1,
-      "yellow: mean wait": 32.74,
-      "green: mean wait": 33.25,
-      "all: mean wait": 32.73,
-      "red wait vs FIFO": 0.0
-    },
-    "model (argmax)": {
-      "red: mean wait (min)": 10.33,
-      "\u00b1 95% CI": 1.42,
-      "red: 90th pct (min)": 26.33,
-      "yellow: mean wait": 32.54,
-      "green: mean wait": 114.86,
-      "all: mean wait": 42.09,
-      "red wait vs FIFO": -0.68
-    },
-    "model (cost-sensitive w'=3)": {
-      "red: mean wait (min)": 8.52,
-      "\u00b1 95% CI": 0.98,
-      "red: 90th pct (min)": 21.86,
-      "yellow: mean wait": 33.33,
-      "green: mean wait": 115.78,
-      "all: mean wait": 42.48,
-      "red wait vs FIFO": -0.74
-    },
-    "red-flag rule": {
-      "red: mean wait (min)": 16.35,
-      "\u00b1 95% CI": 2.94,
-      "red: 90th pct (min)": 46.47,
-      "yellow: mean wait": 38.36,
-      "green: mean wait": 40.53,
-      "all: mean wait": 34.93,
-      "red wait vs FIFO": -0.49
-    },
-    "oracle (true level)": {
-      "red: mean wait (min)": 7.92,
-      "\u00b1 95% CI": 0.89,
-      "red: 90th pct (min)": 20.11,
-      "yellow: mean wait": 31.24,
-      "green: mean wait": 135.18,
-      "all: mean wait": 44.19,
-      "red wait vs FIFO": -0.75
-    }
-  },
-  "sensitivity_5_splits": {
-    "macro_f1_mean": 0.8931,
-    "macro_f1_sd": 0.0093,
-    "red_recall_mean": 0.9249,
-    "red_recall_min": 0.9076
-  },
-  "column_verdicts": {
-    "irrelevant / redundant": 22,
-    "significant": 8,
-    "irrelevant given the others": 8,
-    "informative, but NOT available at triage": 4,
-    "irrelevant given the others (redundant with other columns)": 3,
-    "key (not a feature)": 2,
-    "target": 1,
-    "excluded: leakage": 1
-  },
-  "top_groups": {
-    "DiscomfortLevel": {
-      "impact": 0.2699,
-      "verdict": "significant"
-    },
-    "Collapse information (CollapseSymptom, RiskOfCollapse*)": {
-      "impact": 0.2276,
-      "verdict": "significant"
-    },
-    "Examinations (Examination, Examination_2)": {
-      "impact": 0.0492,
-      "verdict": "significant"
-    },
-    "Avdeling (department)": {
-      "impact": 0.0269,
-      "verdict": "significant"
-    },
-    "Probability of critical outcome": {
-      "impact": 0.0243,
-      "verdict": "significant"
-    },
-    "red_flag_score (combined)": {
-      "impact": 0.0029,
-      "verdict": "irrelevant given the others"
-    }
+  "calibration": [
+   {
+    "index": "(-0.001, 0.2]",
+    "patients": "726",
+    "mean_predicted": "0.1009",
+    "observed_share_red": "0.1915"
+   },
+   {
+    "index": "(0.2, 0.4]",
+    "patients": "521",
+    "mean_predicted": "0.2975",
+    "observed_share_red": "0.3551"
+   },
+   {
+    "index": "(0.4, 0.6]",
+    "patients": "861",
+    "mean_predicted": "0.5062",
+    "observed_share_red": "0.5064"
+   },
+   {
+    "index": "(0.6, 0.8]",
+    "patients": "489",
+    "mean_predicted": "0.6701",
+    "observed_share_red": "0.681"
+   },
+   {
+    "index": "(0.8, 1.0]",
+    "patients": "403",
+    "mean_predicted": "0.9522",
+    "observed_share_red": "1.0"
+   }
+  ],
+  "brier": 0.182603278347196,
+  "revealed_cap_sensitivity": [
+   {
+    "symptoms revealed (max)": "1",
+    "lookup red_recall": "0.0806",
+    "model auc_red": "0.721",
+    "model over_triage at red recall 0.90": "0.391"
+   },
+   {
+    "symptoms revealed (max)": "2",
+    "lookup red_recall": "0.1701",
+    "model auc_red": "0.7881",
+    "model over_triage at red recall 0.90": "0.3595"
+   },
+   {
+    "symptoms revealed (max)": "3",
+    "lookup red_recall": "0.2103",
+    "model auc_red": "0.7944",
+    "model over_triage at red recall 0.90": "0.321"
+   },
+   {
+    "symptoms revealed (max)": "all",
+    "lookup red_recall": "0.3542",
+    "model auc_red": "0.8349",
+    "model over_triage at red recall 0.90": "0.264"
+   }
+  ],
+  "department": {
+   "top-1 accuracy": 0.5591324974584887,
+   "top-2 accuracy": 0.6963741104710268,
+   "patients with a recommendation": 0.9836666666666667,
+   "baseline: always the largest department": 0.236,
+   "departments": 8
   }
+ },
+ "queue": {
+  "assumptions": {
+   "servers": 3,
+   "utilisation": 0.9,
+   "patients_per_run": 200,
+   "runs": 40,
+   "service_mean_green_yellow_red": [
+    12.0,
+    25.0,
+    40.0
+   ],
+   "extra_min_per_overtriage_base": 0.0,
+   "targets_green_yellow_red_min": [
+    120.0,
+    60.0,
+    10.0
+   ],
+   "J_weights": {
+    "beta": 1.0,
+    "gamma": 0.2,
+    "delta": 1.0,
+    "alpha": "w x delta"
+   }
+  },
+  "base_case": [
+   {
+    "rule": "First come, first served",
+    "red wait, mean (min)": 35.613,
+    "\u00b1 95% CI": 6.178,
+    "red wait, 90th pct": 87.617,
+    "other wait, mean (min)": 37.594,
+    "all, mean (min)": 36.538,
+    "mean queue length": 3.109,
+    "red within 10 min": 0.416,
+    "deteriorated per 100": 5.588,
+    "missed red per 100": 0.0,
+    "over-triaged per 100": 0.0,
+    "red wait vs first come": 0.0,
+    "J (w=10)": null
+   },
+   {
+    "rule": "Keyword rule (HospitalSim)",
+    "red wait, mean (min)": 35.55,
+    "\u00b1 95% CI": 6.28,
+    "red wait, 90th pct": 114.169,
+    "other wait, mean (min)": 42.953,
+    "all, mean (min)": 38.995,
+    "mean queue length": 3.316,
+    "red within 10 min": 0.536,
+    "deteriorated per 100": 4.512,
+    "missed red per 100": 49.725,
+    "over-triaged per 100": 0.0,
+    "red wait vs first come": -0.002,
+    "J (w=10)": 541.391
+   },
+   {
+    "rule": "Lookup rule",
+    "red wait, mean (min)": 32.036,
+    "\u00b1 95% CI": 5.789,
+    "red wait, 90th pct": 83.756,
+    "other wait, mean (min)": 49.121,
+    "all, mean (min)": 40.196,
+    "mean queue length": 3.413,
+    "red within 10 min": 0.525,
+    "deteriorated per 100": 3.025,
+    "missed red per 100": 38.438,
+    "over-triaged per 100": 0.0,
+    "red wait vs first come": -0.1,
+    "J (w=10)": 426.235
+   },
+   {
+    "rule": "Risk model, by colour",
+    "red wait, mean (min)": 28.422,
+    "\u00b1 95% CI": 5.243,
+    "red wait, 90th pct": 67.612,
+    "other wait, mean (min)": 55.852,
+    "all, mean (min)": 41.614,
+    "mean queue length": 3.538,
+    "red within 10 min": 0.518,
+    "deteriorated per 100": 2.75,
+    "missed red per 100": 6.025,
+    "over-triaged per 100": 29.538,
+    "red wait vs first come": -0.202,
+    "J (w=10)": 129.38
+   },
+   {
+    "rule": "Risk model, colour then risk",
+    "red wait, mean (min)": 25.554,
+    "\u00b1 95% CI": 4.564,
+    "red wait, 90th pct": 61.525,
+    "other wait, mean (min)": 63.577,
+    "all, mean (min)": 43.98,
+    "mean queue length": 3.746,
+    "red within 10 min": 0.615,
+    "deteriorated per 100": 1.75,
+    "missed red per 100": 6.025,
+    "over-triaged per 100": 29.538,
+    "red wait vs first come": -0.282,
+    "J (w=10)": 128.057
+   },
+   {
+    "rule": "True colour (oracle)",
+    "red wait, mean (min)": 14.906,
+    "\u00b1 95% CI": 1.785,
+    "red wait, 90th pct": 42.925,
+    "other wait, mean (min)": 79.581,
+    "all, mean (min)": 46.058,
+    "mean queue length": 3.92,
+    "red within 10 min": 0.582,
+    "deteriorated per 100": 1.675,
+    "missed red per 100": 0.0,
+    "over-triaged per 100": 0.0,
+    "red wait vs first come": -0.581,
+    "J (w=10)": 30.822
+   }
+  ],
+  "J_parts": [
+   {
+    "rule": "Keyword rule (HospitalSim)",
+    "alpha x MissedRed": 497.25,
+    "beta x RedWait": 35.55,
+    "gamma x OtherWait": 8.59,
+    "delta x OverTriage": 0.0,
+    "J": 541.39
+   },
+   {
+    "rule": "Lookup rule",
+    "alpha x MissedRed": 384.38,
+    "beta x RedWait": 32.04,
+    "gamma x OtherWait": 9.82,
+    "delta x OverTriage": 0.0,
+    "J": 426.24
+   },
+   {
+    "rule": "Risk model, by colour",
+    "alpha x MissedRed": 60.25,
+    "beta x RedWait": 28.42,
+    "gamma x OtherWait": 11.17,
+    "delta x OverTriage": 29.54,
+    "J": 129.38
+   },
+   {
+    "rule": "Risk model, colour then risk",
+    "alpha x MissedRed": 60.25,
+    "beta x RedWait": 25.55,
+    "gamma x OtherWait": 12.72,
+    "delta x OverTriage": 29.54,
+    "J": 128.06
+   },
+   {
+    "rule": "True colour (oracle)",
+    "alpha x MissedRed": 0.0,
+    "beta x RedWait": 14.91,
+    "gamma x OtherWait": 15.92,
+    "delta x OverTriage": 0.0,
+    "J": 30.82
+   }
+  ],
+  "frontier": [
+   {
+    "w'": 1.0,
+    "red_recall": 0.668,
+    "over_triage": 0.133,
+    "red_wait": 28.972,
+    "other_wait": 56.214,
+    "queue_len": 3.573,
+    "deteriorated_per_100": 2.488,
+    "J@w=2": 87.14,
+    "J@w=5": 137.728,
+    "J@w=10": 222.04,
+    "J@w=25": 474.978
+   },
+   {
+    "w'": 1.5,
+    "red_recall": 0.783,
+    "over_triage": 0.211,
+    "red_wait": 29.057,
+    "other_wait": 54.925,
+    "queue_len": 3.531,
+    "deteriorated_per_100": 2.538,
+    "J@w=2": 82.717,
+    "J@w=5": 115.717,
+    "J@w=10": 170.717,
+    "J@w=25": 335.717
+   },
+   {
+    "w'": 2.0,
+    "red_recall": 0.822,
+    "over_triage": 0.241,
+    "red_wait": 28.158,
+    "other_wait": 56.077,
+    "queue_len": 3.541,
+    "deteriorated_per_100": 2.525,
+    "J@w=2": 81.011,
+    "J@w=5": 108.199,
+    "J@w=10": 153.511,
+    "J@w=25": 289.449
+   },
+   {
+    "w'": 3.0,
+    "red_recall": 0.882,
+    "over_triage": 0.303,
+    "red_wait": 28.422,
+    "other_wait": 55.852,
+    "queue_len": 3.538,
+    "deteriorated_per_100": 2.75,
+    "J@w=2": 81.18,
+    "J@w=5": 99.255,
+    "J@w=10": 129.38,
+    "J@w=25": 219.755
+   },
+   {
+    "w'": 4.0,
+    "red_recall": 0.907,
+    "over_triage": 0.332,
+    "red_wait": 28.053,
+    "other_wait": 54.236,
+    "queue_len": 3.454,
+    "deteriorated_per_100": 2.888,
+    "J@w=2": 80.838,
+    "J@w=5": 94.938,
+    "J@w=10": 118.438,
+    "J@w=25": 188.938
+   },
+   {
+    "w'": 5.0,
+    "red_recall": 0.928,
+    "over_triage": 0.356,
+    "red_wait": 28.171,
+    "other_wait": 55.131,
+    "queue_len": 3.501,
+    "deteriorated_per_100": 3.088,
+    "J@w=2": 81.272,
+    "J@w=5": 92.185,
+    "J@w=10": 110.372,
+    "J@w=25": 164.935
+   },
+   {
+    "w'": 8.0,
+    "red_recall": 0.963,
+    "over_triage": 0.401,
+    "red_wait": 28.186,
+    "other_wait": 55.25,
+    "queue_len": 3.52,
+    "deteriorated_per_100": 3.65,
+    "J@w=2": 81.662,
+    "J@w=5": 87.062,
+    "J@w=10": 96.062,
+    "J@w=25": 123.062
+   },
+   {
+    "w'": 10.0,
+    "red_recall": 0.971,
+    "over_triage": 0.42,
+    "red_wait": 29.053,
+    "other_wait": 53.523,
+    "queue_len": 3.488,
+    "deteriorated_per_100": 3.862,
+    "J@w=2": 83.32,
+    "J@w=5": 87.708,
+    "J@w=10": 95.02,
+    "J@w=25": 116.958
+   },
+   {
+    "w'": 15.0,
+    "red_recall": 0.984,
+    "over_triage": 0.442,
+    "red_wait": 30.692,
+    "other_wait": 50.33,
+    "queue_len": 3.426,
+    "deteriorated_per_100": 4.588,
+    "J@w=2": 85.683,
+    "J@w=5": 88.196,
+    "J@w=10": 92.383,
+    "J@w=25": 104.946
+   },
+   {
+    "w'": 25.0,
+    "red_recall": 0.997,
+    "over_triage": 0.471,
+    "red_wait": 32.576,
+    "other_wait": 45.614,
+    "queue_len": 3.307,
+    "deteriorated_per_100": 5.05,
+    "J@w=2": 88.023,
+    "J@w=5": 88.548,
+    "J@w=10": 89.423,
+    "J@w=25": 92.048
+   }
+  ],
+  "best_w_by_cost_ratio_J": {
+   "2": 4.0,
+   "5": 8.0,
+   "10": 25.0,
+   "25": 25.0
+  },
+  "sensitivity_points": 16,
+  "H_holds_in": 15,
+  "red_wait_reduction_range": [
+   0.1417596447251508,
+   0.4704638218105692
+  ],
+  "other_wait_ratio_range": [
+   1.3441453859972545,
+   1.8412633290432185
+  ],
+  "sensitivity": [
+   {
+    "design": "full factorial",
+    "utilisation": 0.8,
+    "time level": 0.75,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 6.007,
+    "red wait: lookup": 5.536,
+    "red wait: model": 5.155,
+    "red wait: oracle": 3.925,
+    "reduction model vs first come": 0.142,
+    "other wait: first come": 6.774,
+    "other wait: model": 9.105,
+    "deteriorated per 100: first come": 0.52,
+    "deteriorated per 100: model": 0.28,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.8,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 24.892,
+    "red wait: lookup": 22.439,
+    "red wait: model": 18.295,
+    "red wait: oracle": 11.38,
+    "reduction model vs first come": 0.265,
+    "other wait: first come": 26.183,
+    "other wait: model": 39.914,
+    "deteriorated per 100: first come": 3.38,
+    "deteriorated per 100: model": 1.28,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.8,
+    "time level": 1.25,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 109.422,
+    "red wait: lookup": 93.347,
+    "red wait: model": 65.846,
+    "red wait: oracle": 26.613,
+    "reduction model vs first come": 0.398,
+    "other wait: first come": 112.115,
+    "other wait: model": 192.166,
+    "deteriorated per 100: first come": 12.88,
+    "deteriorated per 100: model": 3.96,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.9,
+    "time level": 0.75,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 9.244,
+    "red wait: lookup": 8.569,
+    "red wait: model": 7.061,
+    "red wait: oracle": 5.347,
+    "reduction model vs first come": 0.236,
+    "other wait: first come": 10.137,
+    "other wait: model": 14.642,
+    "deteriorated per 100: first come": 0.76,
+    "deteriorated per 100: model": 0.32,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 47.576,
+    "red wait: lookup": 42.592,
+    "red wait: model": 32.319,
+    "red wait: oracle": 16.1,
+    "reduction model vs first come": 0.321,
+    "other wait: first come": 48.778,
+    "other wait: model": 82.288,
+    "deteriorated per 100: first come": 6.26,
+    "deteriorated per 100: model": 2.26,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.9,
+    "time level": 1.25,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 192.497,
+    "red wait: lookup": 160.488,
+    "red wait: model": 106.819,
+    "red wait: oracle": 37.457,
+    "reduction model vs first come": 0.445,
+    "other wait: first come": 195.895,
+    "other wait: model": 336.537,
+    "deteriorated per 100: first come": 19.62,
+    "deteriorated per 100: model": 5.52,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.95,
+    "time level": 0.75,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 11.471,
+    "red wait: lookup": 10.346,
+    "red wait: model": 8.712,
+    "red wait: oracle": 6.147,
+    "reduction model vs first come": 0.241,
+    "other wait: first come": 12.35,
+    "other wait: model": 18.212,
+    "deteriorated per 100: first come": 1.12,
+    "deteriorated per 100: model": 0.38,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.95,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 66.289,
+    "red wait: lookup": 57.603,
+    "red wait: model": 41.246,
+    "red wait: oracle": 19.107,
+    "reduction model vs first come": 0.378,
+    "other wait: first come": 67.828,
+    "other wait: model": 116.502,
+    "deteriorated per 100: first come": 8.84,
+    "deteriorated per 100: model": 2.9,
+    "H holds": true
+   },
+   {
+    "design": "full factorial",
+    "utilisation": 0.95,
+    "time level": 1.25,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 237.09,
+    "red wait: lookup": 198.643,
+    "red wait: model": 130.862,
+    "red wait: oracle": 44.908,
+    "reduction model vs first come": 0.448,
+    "other wait: first come": 240.455,
+    "other wait: model": 420.31,
+    "deteriorated per 100: first come": 22.32,
+    "deteriorated per 100: model": 6.54,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 2,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 78.24,
+    "red wait: lookup": 69.849,
+    "red wait: model": 52.108,
+    "red wait: oracle": 28.241,
+    "reduction model vs first come": 0.334,
+    "other wait: first come": 80.264,
+    "other wait: model": 135.859,
+    "deteriorated per 100: first come": 9.58,
+    "deteriorated per 100: model": 3.7,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 4,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 33.294,
+    "red wait: lookup": 29.597,
+    "red wait: model": 22.278,
+    "red wait: oracle": 11.063,
+    "reduction model vs first come": 0.331,
+    "other wait: first come": 34.203,
+    "other wait: model": 58.172,
+    "deteriorated per 100: first come": 4.38,
+    "deteriorated per 100: model": 1.46,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 100,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 46.258,
+    "red wait: lookup": 39.439,
+    "red wait: model": 29.072,
+    "red wait: oracle": 17.037,
+    "reduction model vs first come": 0.372,
+    "other wait: first come": 44.868,
+    "other wait: model": 67.821,
+    "deteriorated per 100: first come": 4.84,
+    "deteriorated per 100: model": 1.48,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 400,
+    "distribution": "exp",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 72.677,
+    "red wait: lookup": 58.175,
+    "red wait: model": 38.485,
+    "red wait: oracle": 19.124,
+    "reduction model vs first come": 0.47,
+    "other wait: first come": 69.723,
+    "other wait: model": 128.379,
+    "deteriorated per 100: first come": 8.77,
+    "deteriorated per 100: model": 2.46,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "gamma",
+    "extra min per over-triage": 0.0,
+    "red wait: first come": 48.902,
+    "red wait: lookup": 43.391,
+    "red wait: model": 29.791,
+    "red wait: oracle": 14.474,
+    "reduction model vs first come": 0.391,
+    "other wait: first come": 50.322,
+    "other wait: model": 86.858,
+    "deteriorated per 100: first come": 7.16,
+    "deteriorated per 100: model": 1.98,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 5.0,
+    "red wait: first come": 47.576,
+    "red wait: lookup": 42.592,
+    "red wait: model": 40.232,
+    "red wait: oracle": 16.1,
+    "reduction model vs first come": 0.154,
+    "other wait: first come": 48.778,
+    "other wait: model": 113.258,
+    "deteriorated per 100: first come": 6.26,
+    "deteriorated per 100: model": 2.54,
+    "H holds": true
+   },
+   {
+    "design": "one at a time",
+    "utilisation": 0.9,
+    "time level": 1.0,
+    "places": 3,
+    "patients": 200,
+    "distribution": "exp",
+    "extra min per over-triage": 10.0,
+    "red wait: first come": 47.576,
+    "red wait: lookup": 42.592,
+    "red wait: model": 50.366,
+    "red wait: oracle": 16.1,
+    "reduction model vs first come": -0.059,
+    "other wait: first come": 48.778,
+    "other wait: model": 152.321,
+    "deteriorated per 100: first come": 6.26,
+    "deteriorated per 100: model": 2.9,
+    "H holds": false
+   }
+  ],
+  "capacity": [
+   {
+    "places": 3,
+    "rule": "First come, first served",
+    "red within 10 min": 0.416,
+    "red wait (min)": 35.613,
+    "other wait (min)": 37.594,
+    "deteriorated per 100": 5.588
+   },
+   {
+    "places": 3,
+    "rule": "Lookup rule",
+    "red within 10 min": 0.525,
+    "red wait (min)": 32.036,
+    "other wait (min)": 49.121,
+    "deteriorated per 100": 3.025
+   },
+   {
+    "places": 3,
+    "rule": "Risk model, by colour",
+    "red within 10 min": 0.518,
+    "red wait (min)": 28.422,
+    "other wait (min)": 55.852,
+    "deteriorated per 100": 2.75
+   },
+   {
+    "places": 3,
+    "rule": "Risk model, colour then risk",
+    "red within 10 min": 0.615,
+    "red wait (min)": 25.554,
+    "other wait (min)": 63.577,
+    "deteriorated per 100": 1.75
+   },
+   {
+    "places": 3,
+    "rule": "True colour (oracle)",
+    "red within 10 min": 0.582,
+    "red wait (min)": 14.906,
+    "other wait (min)": 79.581,
+    "deteriorated per 100": 1.675
+   },
+   {
+    "places": 4,
+    "rule": "First come, first served",
+    "red within 10 min": 0.809,
+    "red wait (min)": 5.753,
+    "other wait (min)": 6.703,
+    "deteriorated per 100": 0.412
+   },
+   {
+    "places": 4,
+    "rule": "Lookup rule",
+    "red within 10 min": 0.84,
+    "red wait (min)": 5.44,
+    "other wait (min)": 7.633,
+    "deteriorated per 100": 0.312
+   },
+   {
+    "places": 4,
+    "rule": "Risk model, by colour",
+    "red within 10 min": 0.839,
+    "red wait (min)": 5.247,
+    "other wait (min)": 8.013,
+    "deteriorated per 100": 0.338
+   },
+   {
+    "places": 4,
+    "rule": "Risk model, colour then risk",
+    "red within 10 min": 0.866,
+    "red wait (min)": 4.807,
+    "other wait (min)": 8.757,
+    "deteriorated per 100": 0.225
+   },
+   {
+    "places": 4,
+    "rule": "True colour (oracle)",
+    "red within 10 min": 0.868,
+    "red wait (min)": 3.698,
+    "other wait (min)": 10.228,
+    "deteriorated per 100": 0.138
+   },
+   {
+    "places": 5,
+    "rule": "First come, first served",
+    "red within 10 min": 0.948,
+    "red wait (min)": 1.345,
+    "other wait (min)": 1.499,
+    "deteriorated per 100": 0.038
+   },
+   {
+    "places": 5,
+    "rule": "Lookup rule",
+    "red within 10 min": 0.957,
+    "red wait (min)": 1.23,
+    "other wait (min)": 1.657,
+    "deteriorated per 100": 0.025
+   },
+   {
+    "places": 5,
+    "rule": "Risk model, by colour",
+    "red within 10 min": 0.954,
+    "red wait (min)": 1.294,
+    "other wait (min)": 1.623,
+    "deteriorated per 100": 0.05
+   },
+   {
+    "places": 5,
+    "rule": "Risk model, colour then risk",
+    "red within 10 min": 0.964,
+    "red wait (min)": 1.132,
+    "other wait (min)": 1.789,
+    "deteriorated per 100": 0.038
+   },
+   {
+    "places": 5,
+    "rule": "True colour (oracle)",
+    "red within 10 min": 0.964,
+    "red wait (min)": 0.986,
+    "other wait (min)": 2.018,
+    "deteriorated per 100": 0.025
+   },
+   {
+    "places": 6,
+    "rule": "First come, first served",
+    "red within 10 min": 0.99,
+    "red wait (min)": 0.333,
+    "other wait (min)": 0.311,
+    "deteriorated per 100": 0.025
+   },
+   {
+    "places": 6,
+    "rule": "Lookup rule",
+    "red within 10 min": 0.992,
+    "red wait (min)": 0.32,
+    "other wait (min)": 0.324,
+    "deteriorated per 100": 0.025
+   },
+   {
+    "places": 6,
+    "rule": "Risk model, by colour",
+    "red within 10 min": 0.991,
+    "red wait (min)": 0.326,
+    "other wait (min)": 0.334,
+    "deteriorated per 100": 0.025
+   },
+   {
+    "places": 6,
+    "rule": "Risk model, colour then risk",
+    "red within 10 min": 0.992,
+    "red wait (min)": 0.3,
+    "other wait (min)": 0.361,
+    "deteriorated per 100": 0.012
+   },
+   {
+    "places": 6,
+    "rule": "True colour (oracle)",
+    "red within 10 min": 0.994,
+    "red wait (min)": 0.262,
+    "other wait (min)": 0.379,
+    "deteriorated per 100": 0.025
+   }
+  ],
+  "places_needed": {
+   "First come, first served": 5,
+   "Lookup rule": 5,
+   "Risk model, by colour": 5,
+   "Risk model, colour then risk": 5,
+   "True colour (oracle)": 5
+  }
+ },
+ "deployment": {
+  "median_ms_per_patient": 16.171062510693446,
+  "p95_ms_per_patient": 18.159327599278186,
+  "model_file_mb": 2.361732,
+  "drift": [
+   {
+    "batch": "normal batch",
+    "inputs with PSI > 0.25": 0.0,
+    "largest PSI": 0.0859,
+    "red recall": 0.8882,
+    "over-triage": 0.298,
+    "share red": 0.492
+   },
+   {
+    "batch": "trauma surge",
+    "inputs with PSI > 0.25": 8.0,
+    "largest PSI": 1.6726,
+    "red recall": 0.9901,
+    "over-triage": 0.244,
+    "share red": 0.71
+   },
+   {
+    "batch": "observations not recorded",
+    "inputs with PSI > 0.25": 4.0,
+    "largest PSI": 15.2319,
+    "red recall": 0.8484,
+    "over-triage": 0.295,
+    "share red": 0.488
+   }
+  ],
+  "alarm_probability": [
+   {
+    "audited red patients": 50,
+    "true recall 0.97": 0.4395,
+    "true recall 0.93": 0.876,
+    "true recall 0.90": 0.9658,
+    "true recall 0.85": 0.996
+   },
+   {
+    "audited red patients": 100,
+    "true recall 0.97": 0.0872,
+    "true recall 0.93": 0.7158,
+    "true recall 0.90": 0.9435,
+    "true recall 0.85": 0.9985
+   },
+   {
+    "audited red patients": 200,
+    "true recall 0.97": 0.0015,
+    "true recall 0.93": 0.5538,
+    "true recall 0.90": 0.9398,
+    "true recall 0.85": 0.9998
+   },
+   {
+    "audited red patients": 400,
+    "true recall 0.97": 0.0,
+    "true recall 0.93": 0.3055,
+    "true recall 0.90": 0.9515,
+    "true recall 0.85": 1.0
+   },
+   {
+    "audited red patients": 800,
+    "true recall 0.97": 0.0,
+    "true recall 0.93": 0.0758,
+    "true recall 0.90": 0.945,
+    "true recall 0.85": 1.0
+   }
+  ]
+ },
+ "runtime_seconds": 96
 }

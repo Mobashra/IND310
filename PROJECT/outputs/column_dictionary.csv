@@ -1,0 +1,50 @@
+no,column,role,n_unique,missing_%,meaning,decision
+1,Diagnosis,KEY,349,0.0,Diagnosis name; several rows per diagnosis,Group key for splitting and for generating patients. Not a predictor.
+2,Symptom,KEY,611,0.0,Symptom name,Key of the lookup table (§4.1). Not a model input: a new symptom has a new name.
+3,Examination,REVEAL,62,1.3,First way to reveal the symptom,Decides the stage at which the symptom becomes known (§3.3).
+4,Examination_2,REVEAL,57,34.2,Second way to reveal the symptom,Same.
+5,Behandlding,TREAT,169,0.0,Treatment,Consequence of the diagnosis. Not known at triage.
+6,Avdeling,DX,8,0.0,Department of the diagnosis (8 values),Known only with the diagnosis. Target of the department recommendation (§5.9).
+7,Common/uncommon,DX,3,0.0,How common the diagnosis is,Known only with the diagnosis. Used for a subgroup table.
+8,"Sannsynlighet for kritisk utfall, nå",DX,23,0.0,Percentage per symptom of a diagnosis,"Share of cases in which the symptom occurs (§2.5). Used to generate patients, not as a predictor."
+9,Kritiskhet kategori,TARGET,5,0.1,Criticality category: Low / Medium / High Hazard,Triage colour green / yellow / red.
+10,Interview reveal,REVEAL,2,0.0,True if the symptom is revealed in the interview,Decides whether the symptom is known at the desk.
+11,Symptom.1,DROP,351,24.2,Upper-case copy of Symptom,Duplicate.
+12,ICON,DROP,10,24.2,Icon file name,Graphics.
+13,IsMainSymptom,DX,3,24.2,Main symptom of a diagnosis,Diagnosis level. Not used.
+14,DiscomfortLevel,BEDSIDE,5,24.2,Discomfort: None / Low / Medium / High,"Visible at the desk, but very close to the label. Tested with and without (§4.3)."
+15,PatientComplains,BEDSIDE,3,24.2,Does the patient complain about it?,Kept.
+16,Hazard,LEAK,4,24.2,Hazard Low/Medium/High in the simulator,Copy of the label. Excluded.
+17,PatientMobility,BEDSIDE,4,24.2,MOBILE / IMMOBILE / INTUBATED,Kept.
+18,Examination 1,DROP,46,24.2,Upper-case copy of Examination,Duplicate.
+19,Examination 2,DROP,21,24.2,Upper-case copy of Examination_2,Duplicate.
+20,Examination 3,DROP,2,24.2,Third examination (almost always empty),Almost constant.
+21,Treatment,DROP,112,24.2,Upper-case copy of Behandlding,Duplicate.
+22,ShameLevel,BEDSIDE,13,24.2,Embarrassment 0-50,Kept for screening; expected to be irrelevant.
+23,WalkAnim,DROP,2,24.2,Walking animation,Graphics; same information as WalkSpeedModifier.
+24,WalkSpeedModifier,BEDSIDE,2,24.2,Limping (0 or 0.5),Kept.
+25,CollapseSymptom,PROGNOSIS,11,24.2,Type of collapse the symptom can lead to,Known once the symptom is identified. Not visible for an unknown symptom.
+26,RiskOfCollapseStartHours,PROGNOSIS,8,24.2,Hours until a collapse can start,Same. Also used as the deterioration deadline in the queue (§6).
+27,RiskOfCollapseEndHours,PROGNOSIS,11,24.2,Hours until the collapse window ends,Same.
+28,CannotTalk,BEDSIDE,2,24.2,Patient cannot talk,Kept.
+29,RiskOfDeathStartHours,PROGNOSIS,4,24.2,Hours until risk of death starts,Known once the symptom is identified.
+30,RiskOfDeathEndHours,PROGNOSIS,5,24.2,Hours until risk of death ends,Same.
+31,CollapseProcedure,DROP,4,24.2,Procedure after a collapse,"Response of the simulator, not an observation."
+32,PlanAllTreatments,DROP,1,24.2,Constant,Constant column.
+33,BleedingLevel,BEDSIDE,4,24.2,Visible bleeding 0-5,Kept.
+34,Behandling (Engelsk),DROP,142,13.3,Treatment name in English,Duplicate.
+35,Behandling (Norsk),DROP,142,13.3,Treatment name in Norwegian,Translation.
+36,Behandling beskrivelse (Engelsk),DROP,139,13.3,Treatment description,Free text.
+37,Behandling beskrivelse (Norsk),DROP,139,13.3,Treatment description,Free text.
+38,Krav,DROP,77,13.3,Requirement text,Free text.
+39,Surgery room,TREAT,2,13.3,Surgery room required,Not known at triage.
+40,Diagnoses,DROP,100,18.7,Text about diagnoses the treatment fits,Free text.
+41,Diagnoses_temp,DROP,2,13.3,Helper column,Almost constant.
+42,Required Room(s),TREAT,32,18.7,Rooms required,Not known at triage.
+43,Departement(s),DROP,36,18.7,Departments allowed to treat,Overlaps with Avdeling.
+44,Required Equipment(s),DROP,1,13.3,Constant,Constant column.
+45,Legehåndbok,DROP,164,2.0,Links,URLs and spreadsheet errors.
+46,Virtuell sykehus,DROP,4,13.3,Links,URLs.
+47,Kostnader($),TREAT,52,13.3,Payment for the diagnosis in USD,Not known at triage.
+48,Sykdoms beskrivelse (Engelsk),DROP,280,13.3,Disease description,Free text.
+49,Sykdoms beskrivelse (Norsk),DROP,281,13.3,Disease description,Free text.

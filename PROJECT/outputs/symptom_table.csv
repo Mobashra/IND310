@@ -1,0 +1,609 @@
+Symptom,y,n_rows,n_dx,has_attr,stage,cannot_talk,bleeding,immobile,limp,complains,shame,mobility,discomfort,discomfort_ord,bedside_flags,has_collapse,collapse_start,collapse_end,has_death_risk,death_start,death_end,collapse_symptom,hazard,hazard_ord
+2019-Ncov Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+A1at Deficiency,0,6,6,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+ACL Injury,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Abdominal Cramps,1,8,7,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Abdominal Guarding,1,7,7,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Abdominal Injury,1,10,10,True,0,0.0,0.0,1.0,0.0,1.0,50.0,IMMOBILE,High,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Abdominal Pain,1,78,72,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Abdominal Trauma,2,1,1,False,1,,,,,,,,,,,,,,,,,,,
+Abnormal LFT,0,24,21,False,2,,,,,,,,,,,,,,,,,,,
+Abnormal Lung Findings,1,15,13,False,2,,,,,,,,,,,,,,,,,,,
+Acidosis,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Airway Infecton,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Allergen Detected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Allergic Conjunctivitis,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Allergy Discovered,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Anaplasma Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Anemia,0,17,17,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ankle Bruise,0,2,2,True,0,0.0,0.0,0.0,1.0,1.0,10.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ankle Contusion,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ankle Fracture,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ankle Injury,1,4,4,True,0,0.0,0.0,0.0,1.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Ankle Sprain,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Anxiety,0,12,11,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Aortic Aneurysm,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Arm Injury,1,9,9,False,0,,,,,,,,,,,,,,,,,,,
+Arm Penetration,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Arterial Stenosis,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,1.0,3.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Asbestosis Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Aspergilloma Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Astasis,1,3,3,True,0,0.0,0.0,0.0,0.0,1.0,20.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Atherosclerosis,2,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Low,1.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Atopic Eczema Findings,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Autoimmune Antibodies,0,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Azotemia,0,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+B. Anthracis Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,DYSPNEA,High,2.0
+B. Henselae Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,PALPITATIONS,Medium,1.0
+B. Pertussis Detected,1,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+B. Pseudomallei Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+B. Recurrentis Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Babesios Detected,1,2,1,False,2,,,,,,,,,,,,,,,,,,,
+Back Injury,1,2,2,True,0,0.0,0.0,1.0,0.0,1.0,80.0,IMMOBILE,Medium,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Back Pain,1,17,16,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Bacteremia,2,14,13,True,2,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Bacterial Blepharitis,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Bacterial Conjunctivitis,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Bacterial Infection Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Bad Breath,0,3,3,True,0,0.0,0.0,0.0,0.0,1.0,80.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ballistic Wound,1,4,4,False,1,,,,,,,,,,,,,,,,,,,
+Beef Tapeworm Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Bellybutton Pain,1,1,1,True,1,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Black Widow Bite,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Bladder Infection,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Bladder Lining Defect,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Bladder Stones Detected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Blast Wound,1,2,2,False,1,,,,,,,,,,,,,,,,,,,
+Bleeding To Stomach,2,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Blisters,0,12,12,False,0,,,,,,,,,,,,,,,,,,,
+Bloating,0,13,13,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Blood Loss,2,19,19,True,0,0.0,0.0,1.0,0.0,1.0,10.0,IMMOBILE,High,3.0,1.0,1.0,1.0,8.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Blunt Kidney Contusion,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Blunt Pancreas Contusion,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Blunt Pancreas Laceration,2,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Blunt Pulmonary Contusion,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Blunt Spleen Contusion,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Blunt Spleen Rupture,2,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Blurred Vision,0,15,14,True,2,0.0,0.0,0.0,0.0,1.0,30.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Bone Infection,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Borrelia Antibodies Detected,2,2,1,False,2,,,,,,,,,,,,,,,,,,,
+Bradycardia,1,9,9,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Bradypnea,1,6,6,False,1,,,,,,,,,,,,,,,,,,,
+Brain Arteries Blocked,2,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,6.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Brain Hematomas,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,1.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Brain Inflammation,2,1,1,True,2,1.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,1.0,1.0,6.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Breathing Problems,1,87,83,False,0,,,,,,,,,,,,,,,,,,,
+Bronchial Hyperreactivity,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,DYSPNEA,Medium,1.0
+Bronchial Infection,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Bronchial Infection - Chronic,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Brucellosis Confirmed,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Bruise,0,28,28,True,0,0.0,0.0,0.0,0.0,1.0,30.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Burn Wound,1,12,12,False,1,,,,,,,,,,,,,,,,,,,
+Burning Eye,0,2,1,True,0,0.0,0.0,0.0,0.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Butterfly Rash,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+C. Botulinum Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+C. Difficile Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+C. Jejuni Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+CHIKV Virus Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+CSF Leak,2,1,1,False,1,,,,,,,,,,,,,,,,,,,
+Calf Contusion,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Campylobacter In Stool,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Cardiomegaly,2,1,1,True,2,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,None,0.0,0.0,1.0,2.0,8.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Carotid Arteries Blocked,2,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,6.0,24.0,0.0,0.0,0.0,UNCONSCIOUSNESS,Medium,1.0
+Celiac Antibodies Detected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Cerebral Contusion,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chemical Burn On An Arm,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chemical Burn On Torso,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chest Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chest Injury,1,10,9,False,0,,,,,,,,,,,,,,,,,,,
+Chest Pain,1,64,60,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Chest Trauma,2,2,2,False,1,,,,,,,,,,,,,,,,,,,
+Chills,0,44,39,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Chlorine Detected,2,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,6.0,24.0,0.0,0.0,0.0,RESPIRATORY FAILURE,High,2.0
+Cholesteatoma Discovered,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chronic Fatigue Syndrome,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Chylothorax Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Ciguatoxin Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Clavicle Fracture,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Clavicle Shaft Fracture,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Closed Angle,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Clotting Factor Low,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Cloudy Urine,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Cluster Headache,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Coccidioides Atb Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Cohb High Level,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Collapsed Lung,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Collarbone Injury,1,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Colon Ulcers,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Coltivirus Antibodies Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Coma,2,5,5,True,1,1.0,0.0,1.0,0.0,1.0,0.0,INTUBATED,None,0.0,2.0,0.0,0.0,0.0,1.0,1.0,24.0,None,High,2.0
+Concussion,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,1.0,24.0,0.0,0.0,0.0,FAINTING,High,2.0
+Confusion,0,40,35,True,0,0.0,0.0,0.0,0.0,0.0,30.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Constipation,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Copperhead Snake Bite,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Coxiella Burnetii Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Cramps,1,12,11,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Crohn's Disease Discovered,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Croup Present,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Crumbly Nail,0,3,3,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Cryptosporidium Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Cyanosis,1,16,16,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Cystic Duct Obstructed,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dark Skin,1,10,9,False,0,,,,,,,,,,,,,,,,,,,
+Dark Urine,0,10,8,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Degenerative Findings,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Degloved Skin,1,4,4,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dehydration,2,19,16,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Low,1.0,0.0,1.0,1.0,24.0,0.0,0.0,0.0,EXHAUSTION,High,2.0
+Demyelinization Findings,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dengue Virus Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Depression,1,4,4,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Desquamation,0,9,9,False,0,,,,,,,,,,,,,,,,,,,
+Diarrhea,0,39,32,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Diffuse Axonal Injury,1,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dilated Ventricle,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Diminished Hearing,1,8,7,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dizziness,0,47,46,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Dry Cough,0,16,12,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Duodenitis Discovered,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Dysphagia,1,7,7,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Dyspnea,2,19,19,True,1,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Low,1.0,0.0,1.0,1.0,24.0,0.0,0.0,0.0,RESPIRATORY FAILURE,High,2.0
+Dysuria,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+E. Coli Toxin Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+E. Histolytica Discovered,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+EBV Detected,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Ear Canal Infected,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Ear Discharge,1,3,3,False,0,,,,,,,,,,,,,,,,,,,
+Ebola Virus Discovered,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Edema,0,8,8,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ehrlichiosis Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Elastase - Low Level,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Elbow Muscles Damaged,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Elbow Pain,1,4,4,True,0,0.0,0.0,,0.0,,0.0,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,0,
+Elbow Stiffness,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Elbow Tendons Damaged,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Elevated CK,0,7,7,False,2,,,,,,,,,,,,,,,,,,,
+Elevated CRP,0,41,40,False,2,,,,,,,,,,,,,,,,,,,
+Elevated LDL,0,10,10,False,2,,,,,,,,,,,,,,,,,,,
+Emphysema Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Endocarditis Detected,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Eschar,1,15,15,False,0,,,,,,,,,,,,,,,,,,,
+Excessive Belching,0,5,5,False,0,,,,,,,,,,,,,,,,,,,
+Excessive Flatulence,0,7,7,False,0,,,,,,,,,,,,,,,,,,,
+Exhaustion,2,12,9,True,0,0.0,0.0,1.0,0.0,1.0,0.0,IMMOBILE,High,3.0,1.0,1.0,1.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Exposed Bone,1,7,7,False,0,,,,,,,,,,,,,,,,,,,
+Eye Pain,1,12,12,True,0,0.0,0.0,0.0,0.0,1.0,70.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+F. Tularensis Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Fainting,2,10,10,True,0,0.0,0.0,1.0,0.0,1.0,20.0,IMMOBILE,Low,1.0,1.0,1.0,1.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Fat Malabsorption,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Fatigue,0,107,97,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Femoral Fracture,1,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Femur Fracture,0,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Femur Fragments Fracture,1,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Fever,1,151,135,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Fibrotic Liver Tissue,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Fibula Fracture,0,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Finger Fracture,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Finger Numbness,0,6,6,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Flail Chest,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,2.0,12.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Fluid In the Middle Ear,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Foot Injury,1,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Foot Penetrated,0,1,1,False,1,,,,,,,,,,,,,,,,,,,
+Forearm Contusion,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Foreign Object Present,2,11,11,False,2,,,,,,,,,,,,,,,,,,,
+Formate - Toxic Levels,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fracture of the Mandible,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fracture of the Nose,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured Femur Depicted,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured Humerus Depicted,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured Ribs,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured Tibia Depicted,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured Ulna Depicted,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fractured and Dislocated Vertebra,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Fragmented Ribs,1,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Frequent Falling,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,10.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Frequent Urination,0,6,6,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Fungal Infection,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Gallbladder Rupture,2,2,2,True,2,0.0,0.0,1.0,0.0,1.0,0.0,IMMOBILE,High,3.0,1.0,1.0,3.0,10.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Gallstones Identified,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Gastric Ulcers Identified,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Gastritis Discovered,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Giant Cell Arteritis,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Giardia Lamblia Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Granulomas - Eyes,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Granulomas - Heart,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Granulomas - Lungs,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Guillain-Barre Findings,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Gunshot Wound,1,2,2,False,1,,,,,,,,,,,,,,,,,,,
+H. Pylori Detected,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+H5N1 Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+HRSV Present,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Hair Loss,0,3,3,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hallucinations,1,4,4,False,0,,,,,,,,,,,,,,,,,,,
+Hand Injury,1,3,3,False,0,,,,,,,,,,,,,,,,,,,
+Hand Pain,1,10,10,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hand Penetrated,0,1,1,False,1,,,,,,,,,,,,,,,,,,,
+Hand Weakness,0,8,8,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hantavirus Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Haptoglobin - Low Levels,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Head Injury,1,5,5,False,1,,,,,,,,,,,,,,,,,,,
+Head Trauma,1,2,2,True,0,0.0,0.0,1.0,0.0,1.0,5.0,IMMOBILE,Medium,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Headache,0,113,101,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hearing Problems,0,8,8,False,0,,,,,,,,,,,,,,,,,,,
+Heart Attack,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,2.0,8.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Heart Failing,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,4.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Heart Failure,2,2,2,True,2,1.0,,1.0,0.0,1.0,0.0,INTUBATED,None,0.0,2.0,0.0,0.0,0.0,1.0,0.1,1.0,None,High,2.0
+Heat Rash,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Hematochezia,1,9,9,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hematuria,1,15,15,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hemiparesis,1,7,5,True,0,0.0,0.0,1.0,0.0,1.0,5.0,IMMOBILE,Medium,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hemoptysis,1,16,13,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hemorrhage,2,26,26,True,0,0.0,2.0,0.0,0.0,1.0,0.0,MOBILE,High,3.0,1.0,1.0,4.0,8.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Hemothorax Discovered,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Hepatitis A Positive,0,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hepatitis B Positive,1,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hepatitis E Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+High Chloride Level,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+High Fever,2,38,34,False,0,,,,,,,,,,,,,,,,,,,
+High Sugar Level,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hip Joints Damaged,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Histoplasma Detected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hoarseness,0,8,8,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Humeral Fracture,1,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Humerus Fractured,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Humerus Fragments Fracture,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hunger,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hyperacidity,0,3,3,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hyperlipidemia,0,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hypertension,2,17,17,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Hypertensive Findings,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Hypocalcaemia,0,3,3,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hypotension,0,18,17,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Hypothermia,2,4,4,False,1,,,,,,,,,,,,,,,,,,,
+Hypovolemia,2,6,6,False,1,,,,,,,,,,,,,,,,,,,
+Hypovolemic Shock,2,29,28,True,1,1.0,0.0,1.0,0.0,1.0,0.0,INTUBATED,None,0.0,2.0,0.0,0.0,0.0,1.0,2.0,4.0,None,High,2.0
+Hypoxemia,2,6,6,False,2,,,,,,,,,,,,,,,,,,,
+Hypoxia,2,16,16,False,2,,,,,,,,,,,,,,,,,,,
+IBS-D Confirmed,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Increased ICP,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Indigestion,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Infected Wound,0,4,4,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Inflamed Bilduct,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Inflamed Hand Bursae,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Inflamed Myocardium,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Inflamed Sinuses,0,4,4,False,1,,,,,,,,,,,,,,,,,,,
+Inflamed Thyroid,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Influenza A Detected,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Influenza B Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Insomnia Revealed,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Instep Contusion,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Intestinal Bleeding,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,High,2.0
+Intestinal Fistula,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Intracranial Hematoma,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,6.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Intracranial Hemorrhage,2,3,3,True,2,1.0,2.0,1.0,0.0,1.0,0.0,IMMOBILE,None,0.0,3.0,1.0,1.0,3.0,0.0,0.0,0.0,COMA,High,2.0
+Irregular Heartbeat,2,38,32,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,4.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Irritability,0,10,9,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Irritable Cough,0,24,23,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Itching,0,15,15,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Itchy Blisters,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Itchy Eyes,0,8,7,False,0,,,,,,,,,,,,,,,,,,,
+Jaundice,0,15,13,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Joint Immobility,1,5,5,False,0,,,,,,,,,,,,,,,,,,,
+Kidney Damaged,2,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Kidney Interstitium Abscess,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Kidney Laceration,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Kidney Progressive Damage,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,EXHAUSTION,High,2.0
+Kidney Stones Discovered,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Kidney Tissue Damaged,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Kidney Tissue Inflamed,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Knee Bursae Inflamed,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Knee Injury,1,3,3,True,0,0.0,0.0,0.0,1.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Knee Joint Damaged,0,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Knee Sprain,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+LCMV Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lactose Intolerance,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Large Arteries Damaged,2,13,13,False,2,,,,,,,,,,,,,,,,,,,
+Large Intestine Perforated,2,4,4,False,2,,,,,,,,,,,,,,,,,,,
+Larynx Infected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Lassa Virus Present,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lead Levels High,2,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,6.0,12.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Leg Injury,1,10,10,False,0,,,,,,,,,,,,,,,,,,,
+Leg Penetrated,0,1,1,False,1,,,,,,,,,,,,,,,,,,,
+Legionella Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Leptospira Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Leukocytosis,1,9,8,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Leukopenia,1,17,15,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Lightning Caused Lesions,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Limited Arm Motion,0,12,12,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Limited Leg Motion,0,17,17,True,0,0.0,0.0,0.0,1.0,1.0,10.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Lipiduria,0,3,3,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Liver Contusion,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Liver Damaged,2,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Liver Laceration,2,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,High,2.0
+Liver and Spleen Lacerated,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Long Reaction Time,0,4,4,False,2,,,,,,,,,,,,,,,,,,,
+Loss of Appetite,0,27,22,False,0,,,,,,,,,,,,,,,,,,,
+Loss of Vision,1,7,7,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Low Hematocrit,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Low Hemoglobin,0,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Low Voltage Burn,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lower Abdomen Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lower Abdomen Trauma,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lower Limb Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lower Limb Trauma,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Lung Embolism,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,RESPIRATORY FAILURE,High,2.0
+Lung Tissue Findings,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Lungs Perforated,2,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Lupus Findings,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+MAC Detected,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,DYSPNEA,Medium,1.0
+MARV Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+MERS-Cov Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Malaise,0,29,25,True,0,0.0,0.0,0.0,0.0,1.0,60.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Malnutrition,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Mandibular Injury,1,1,1,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Mastadenovirus B Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Mastoiditis Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Median Nerve Compression,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Meniere's Disease,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Metatarsal Fracture,0,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Migraine Detected,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Mild Frostbite On Hands,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Mild Frostbite On Legs,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Mitral Stenosis,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Mitral Valve Prolapsed,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Multiple Arteries Damage,2,5,5,True,1,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,None,0.0,0.0,1.0,2.0,4.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Muscle Pain,1,36,35,True,0,0.0,0.0,0.0,0.0,1.0,20.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Muscle Weakness,0,10,10,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Muscle and Joint Pain,1,51,40,False,0,,,,,,,,,,,,,,,,,,,
+Muscle and Skin Damage,1,27,27,False,1,,,,,,,,,,,,,,,,,,,
+Muscles Inflamed,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Myocardial Contusion,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Myocardial Scarring,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Nail Discoloration,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Nail Thickening,0,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Narrowed Arteries,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Nasal Congestion,0,16,15,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Nasal Deformity,1,1,1,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Nasal Obstruction,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Nasal Polyps Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Nasal Viral Infection,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Nausea,0,76,70,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Neck Bone Spurs,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Neck Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Neck Pain,1,4,4,True,0,0.0,0.0,0.0,0.0,1.0,15.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Neck Trauma,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Necrosis,2,10,10,False,1,,,,,,,,,,,,,,,,,,,
+Neuromyelitis Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Night Sweats,0,9,8,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Nipah Virus Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Norovirus Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Nosebleed,0,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Numbness,0,17,17,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+ORL Findings,0,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Obstructed Airways,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,DYSPNEA,Medium,1.0
+Ocular Hypertension,1,6,6,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Oesophagus Abnormalities,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Oesophagus Infection,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Olecranon Bursae Inflamed,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Oliguria,0,4,3,True,0,0.0,0.0,0.0,0.0,1.0,70.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Oocyst In Stool Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Open Head Wound,2,1,1,True,1,1.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,1.0,1.0,1.0,5.0,0.0,0.0,0.0,COMA,High,2.0
+Open Wound,1,21,20,True,0,0.0,0.0,0.0,0.0,1.0,20.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Optic Nerve Atrophy,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Orifice Bleeding,2,6,6,False,0,,,,,,,,,,,,,,,,,,,
+Osteoporosis,0,5,5,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Otalgia,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Otosclerosis Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Out-of-Place Ankle,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Out-of-Place Knee,1,1,1,True,2,0.0,0.0,0.0,1.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Out-of-Place Shoulder,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Outer Ear Infection,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+P. Aeruginosa,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Pain,1,49,49,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pain In the Ears,1,3,3,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Painful Lymph Nodes,1,5,4,False,0,,,,,,,,,,,,,,,,,,,
+Painful Urination,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,20.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Painful Vesicular Rash,1,2,2,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pale Skin,0,12,12,True,0,0.0,0.0,0.0,0.0,1.0,80.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Palpitations,2,7,7,True,2,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Low,1.0,0.0,1.0,1.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Pancreas Damaged,2,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Pancreas Laceration,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Pancreatic Inflammation,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Papulas and Vesicles,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Parotid Infection,0,2,1,False,2,,,,,,,,,,,,,,,,,,,
+Penetrating Wound,1,6,6,False,1,,,,,,,,,,,,,,,,,,,
+Peritoneal Fluid Shows Infection,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Petechiae,0,9,9,True,0,0.0,0.0,0.0,0.0,1.0,10.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Photophobia,1,14,14,True,0,0.0,0.0,0.0,0.0,1.0,10.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pigmentation Changes,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Plasmodium Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Pleural Effusion,2,11,11,False,2,,,,,,,,,,,,,,,,,,,
+Pleural Fluid Infected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Pleural Transudate,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Pneumatocele,1,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pneumonic Lungs,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,RESPIRATORY FAILURE,High,2.0
+Poison Ivy Rash,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Polymyositic Findings,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Polyuria,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Poor Balance,0,9,9,True,0,0.0,0.0,0.0,1.0,1.0,20.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Pork Tapeworm Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Portal Hypertension,1,7,6,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Portal Vein Blocked,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,2.0,12.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Post-Traumatic Amnesia,0,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Prolonged Bleeding,2,2,2,True,0,0.0,2.0,0.0,0.0,1.0,0.0,MOBILE,Medium,2.0,1.0,1.0,2.0,5.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Proteinuria,0,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Pseudofractures,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pulmonary Artery Blockage,2,4,4,True,2,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Pulmonary Hypertension Detected,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Pulmonary Laceration,2,2,1,False,2,,,,,,,,,,,,,,,,,,,
+Punctured Lungs,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Purpura,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+R. Typhi Detected,0,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+RSV Present,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+RVF Virus Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rabies Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,SEPTIC SHOCK,High,2.0
+Radial Fracture,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Radius Fracture,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rash,0,32,29,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rash On Arm,0,6,5,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rash On Leg,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rash On Neck,0,4,4,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rash On Torso,0,5,5,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Rattlesnake Bite,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Raynaud's Findings,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Red Eye,0,18,15,True,0,0.0,0.0,0.0,0.0,1.0,10.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Red Swollen Tonsils,1,4,4,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Redness,0,28,28,True,0,0.0,0.0,,0.0,,0.0,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,0,
+Redness of A Swelling,0,5,5,False,0,,,,,,,,,,,,,,,,,,,
+Redness of Skin,0,8,8,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Renal Hypertension,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Respiratory Failure,2,7,7,True,1,1.0,0.0,1.0,0.0,0.0,0.0,INTUBATED,None,0.0,2.0,0.0,0.0,0.0,1.0,0.1,0.5,None,High,2.0
+Retina Scarring,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Retinal Vein Occlusion,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Retinopathy Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Rheumatic Fever,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rheumatoid Factor,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Rickettsia Africae Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Akari Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Australis Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Conorii Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Honei Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Japonica Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Philipii Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Rickettsii Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rickettsia Slovaca Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Rotavirus A Detected,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+S. Pyogenes Present,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+S. Typhi Detected,1,2,1,False,2,,,,,,,,,,,,,,,,,,,
+SARS-Cov Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Sagging Shoulder,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,25.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Salmonellosis Confirmed,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Scleral Changes,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Sclerotic Liver Tissue,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Scoliotic Findings,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Scratched Cornea,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Septic Shock,2,5,4,True,2,1.0,0.0,1.0,0.0,1.0,0.0,IMMOBILE,None,0.0,2.0,0.0,0.0,0.0,1.0,2.0,4.0,None,High,2.0
+Severe Arm Pain,1,11,11,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Severe Frostbite On Hands,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Severe Frostbite On Legs,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Severe Hemorrhage,2,24,23,True,0,0.0,5.0,0.0,0.0,1.0,50.0,MOBILE,High,3.0,1.0,1.0,0.5,1.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Severe Leg Pain,1,9,9,True,0,0.0,0.0,0.0,1.0,1.0,5.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Severe thermal Burn,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Shoulder Injury,1,2,2,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Shoulder Sprain,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Sibm Findings,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Skin Avulsion,1,6,6,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,High,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Skin and Fat Tissue Damaged,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Skull Basis Fracture,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,2.0,4.0,0.0,0.0,0.0,COMA,High,2.0
+Skull Fracture,2,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,2.0,4.0,0.0,0.0,0.0,COMA,High,2.0
+Sleeping Problems,0,11,10,False,0,,,,,,,,,,,,,,,,,,,
+Slurred Speech,0,15,14,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Small Intestine Perforated,2,4,4,False,2,,,,,,,,,,,,,,,,,,,
+Sneezing,0,9,9,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Sore Throat,0,20,18,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Spasms,1,10,10,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Spatula Test Positive,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Spleen Damaged,2,2,2,False,2,,,,,,,,,,,,,,,,,,,
+Spleen Rupture,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Spleen and Pancreas Lacerated,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Sputum Cough,0,18,15,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stab Wound,1,2,2,False,1,,,,,,,,,,,,,,,,,,,
+Staphylococcus Aureus,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Steatorrhea,0,2,2,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stiffness,0,6,6,True,0,0.0,0.0,0.0,0.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stiffness of the Back,0,3,3,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stiffness of the Hip,0,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Stiffness of the Joints,0,2,2,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stiffness of the Knee,0,3,3,False,0,,,,,,,,,,,,,,,,,,,
+Stiffness of the Neck,0,4,4,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Stomach Pain,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,60.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Stomach Perforated,2,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Strep Skin Infection,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Streptobacillus Detected,0,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Streptococcus Pneumoniae,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Strong-Smelling Urine,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,60.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Sub-Dermal Tissue Damaged,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Sun-Burnt Skin,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Superficial Thrombosis,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Suppurative Tonsils,1,2,2,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Swallow Pain,1,10,8,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Sweating,0,17,17,True,0,0.0,0.0,0.0,0.0,1.0,10.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swelling,0,50,50,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swelling Joints,0,2,2,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swelling Knee,0,2,2,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swelling Limbs,0,9,9,True,0,0.0,0.0,0.0,1.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swollen Abdomen,0,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Swollen Ear Canal,1,5,5,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Swollen Ear Lobe,0,2,2,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swollen Eyelids,1,3,3,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Swollen Lymph Nodes,0,23,18,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Swollen Pericardium,2,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Swollen Thyroid Gland,1,3,3,True,1,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+TBE Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,RESPIRATORY FAILURE,High,2.0
+TIA Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+TSH - High Level,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+TSH - Low Level,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Tachycardia,2,34,34,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,PALPITATIONS,High,2.0
+Tachypnea,1,15,15,False,1,,,,,,,,,,,,,,,,,,,
+Tenderness,0,70,67,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Thalassemia Discovered,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Thirst,0,6,5,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Thorax Contusion,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Thrombocythemia,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Thrombocytopenia Detected,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Thumb Pain,1,1,1,True,0,0.0,0.0,0.0,0.0,1.0,5.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Tibia Fracture,0,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Tibia Spiral Fracture,0,1,1,True,2,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Tibial Fracture,1,3,3,False,2,,,,,,,,,,,,,,,,,,,
+Tinea Pedis Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Tinnitus,0,6,6,False,0,,,,,,,,,,,,,,,,,,,
+Toxoplasmosis Detected,1,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Traumatic Aortic Rupture,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,0.1,0.5,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Traumatic Cardiac Arrest,2,1,1,True,2,1.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,2.0,1.0,0.1,0.5,0.0,0.0,0.0,HEART FAILURE,High,2.0
+Tremor,1,11,11,True,0,0.0,0.0,0.0,0.0,1.0,50.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Tricuspid Regurgitation,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Trouble Rising,1,4,4,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Trypanosoma Detected,2,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,1.0,6.0,24.0,0.0,0.0,0.0,EXHAUSTION,Medium,1.0
+Tuberculosis Detected,2,2,1,False,2,,,,,,,,,,,,,,,,,,,
+Tubulus Inflammation,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Tympanic Membrane Inflammation,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Ulna Fragments Fracture,1,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Ulnar Claw,0,1,1,True,0,0.0,0.0,0.0,0.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Ulnar Fracture,1,4,4,False,2,,,,,,,,,,,,,,,,,,,
+Ulnar Nerve Compression,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Unconsciousness,2,11,11,True,1,1.0,0.0,1.0,0.0,1.0,0.0,IMMOBILE,None,0.0,2.0,1.0,6.0,24.0,0.0,0.0,0.0,COMA,High,2.0
+Unstable Blood Pressure,2,1,1,True,1,0.0,0.0,1.0,0.0,0.0,0.0,IMMOBILE,None,0.0,1.0,1.0,1.0,24.0,0.0,0.0,0.0,HEART FAILURE,Medium,1.0
+Unstoppable Bleeding,2,11,11,True,0,0.0,5.0,1.0,0.0,1.0,0.0,IMMOBILE,High,3.0,2.0,1.0,1.0,2.0,0.0,0.0,0.0,HYPOVOLEMIC SHOCK,High,2.0
+Upper Abdomen Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Upper Abdomen Trauma,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Upper Limb Cavitation,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Upper Limb Trauma,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Ureter Stone Detected,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Urinary Incontinence,1,2,2,False,0,,,,,,,,,,,,,,,,,,,
+Urinary Urgency,0,3,3,False,0,,,,,,,,,,,,,,,,,,,
+Varices In the Oesophagus,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Vertebral Stress Fracture,0,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Vibrio Cholerae Detected,1,2,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Viremia,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Visual Field Limited,1,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Vitamin Deficiency,0,4,4,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Vomiting,1,79,69,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Waddling Gait,1,4,4,True,0,0.0,0.0,0.0,1.0,1.0,20.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Walking Problems,1,9,9,False,0,,,,,,,,,,,,,,,,,,,
+Warmth,0,8,8,True,0,0.0,0.0,0.0,0.0,1.0,15.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Watery Eyes,0,9,8,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Weakness,0,53,50,True,0,0.0,0.0,0.0,0.0,1.0,0.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Weight Gain,0,3,3,True,0,0.0,0.0,0.0,0.0,1.0,70.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Weight Loss,0,39,38,True,0,0.0,0.0,0.0,0.0,1.0,40.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+West Nile Virus,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Wheezing,0,12,12,True,0,0.0,0.0,0.0,0.0,1.0,60.0,MOBILE,Low,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+White Patches On Tonsils,0,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Widespread Painful Rash,1,1,1,True,1,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Wrist Contusion,0,1,1,True,2,0.0,0.0,0.0,0.0,0.0,0.0,MOBILE,None,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Low,0.0
+Wrist Pain,1,3,3,True,0,0.0,0.0,0.0,0.0,1.0,90.0,MOBILE,Medium,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,None,Medium,1.0
+Y. Pestis - Bubonic Form,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Y. Pestis - Pneumonic Form,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Y. Pestis - Septicemic Form,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Yellow Fever Virus,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+Zika Virus Detected,2,1,1,False,2,,,,,,,,,,,,,,,,,,,
+thermal Burn On A Leg,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
+thermal Burn On An Arm,1,1,1,False,2,,,,,,,,,,,,,,,,,,,
