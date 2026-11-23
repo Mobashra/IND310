@@ -1053,7 +1053,7 @@
     "observed_share_red": "1.0"
    }
   ],
-  "brier": 0.182603278347196,
+  "brier": 0.18260327834719597,
   "revealed_cap_sensitivity": [
    {
     "symptoms revealed (max)": "1",
@@ -1252,6 +1252,8 @@
     "red_recall": 0.668,
     "over_triage": 0.133,
     "red_wait": 28.972,
+    "green_wait": 120.835,
+    "yellow_wait": 50.639,
     "other_wait": 56.214,
     "queue_len": 3.573,
     "deteriorated_per_100": 2.488,
@@ -1265,6 +1267,8 @@
     "red_recall": 0.783,
     "over_triage": 0.211,
     "red_wait": 29.057,
+    "green_wait": 121.342,
+    "yellow_wait": 49.302,
     "other_wait": 54.925,
     "queue_len": 3.531,
     "deteriorated_per_100": 2.538,
@@ -1278,6 +1282,8 @@
     "red_recall": 0.822,
     "over_triage": 0.241,
     "red_wait": 28.158,
+    "green_wait": 121.777,
+    "yellow_wait": 50.429,
     "other_wait": 56.077,
     "queue_len": 3.541,
     "deteriorated_per_100": 2.525,
@@ -1291,6 +1297,8 @@
     "red_recall": 0.882,
     "over_triage": 0.303,
     "red_wait": 28.422,
+    "green_wait": 115.465,
+    "yellow_wait": 50.883,
     "other_wait": 55.852,
     "queue_len": 3.538,
     "deteriorated_per_100": 2.75,
@@ -1304,6 +1312,8 @@
     "red_recall": 0.907,
     "over_triage": 0.332,
     "red_wait": 28.053,
+    "green_wait": 100.924,
+    "yellow_wait": 50.157,
     "other_wait": 54.236,
     "queue_len": 3.454,
     "deteriorated_per_100": 2.888,
@@ -1317,6 +1327,8 @@
     "red_recall": 0.928,
     "over_triage": 0.356,
     "red_wait": 28.171,
+    "green_wait": 95.915,
+    "yellow_wait": 51.464,
     "other_wait": 55.131,
     "queue_len": 3.501,
     "deteriorated_per_100": 3.088,
@@ -1330,6 +1342,8 @@
     "red_recall": 0.963,
     "over_triage": 0.401,
     "red_wait": 28.186,
+    "green_wait": 86.412,
+    "yellow_wait": 52.609,
     "other_wait": 55.25,
     "queue_len": 3.52,
     "deteriorated_per_100": 3.65,
@@ -1343,6 +1357,8 @@
     "red_recall": 0.971,
     "over_triage": 0.42,
     "red_wait": 29.053,
+    "green_wait": 85.523,
+    "yellow_wait": 50.903,
     "other_wait": 53.523,
     "queue_len": 3.488,
     "deteriorated_per_100": 3.862,
@@ -1356,6 +1372,8 @@
     "red_recall": 0.984,
     "over_triage": 0.442,
     "red_wait": 30.692,
+    "green_wait": 83.075,
+    "yellow_wait": 47.603,
     "other_wait": 50.33,
     "queue_len": 3.426,
     "deteriorated_per_100": 4.588,
@@ -1369,6 +1387,8 @@
     "red_recall": 0.997,
     "over_triage": 0.471,
     "red_wait": 32.576,
+    "green_wait": 69.271,
+    "yellow_wait": 43.748,
     "other_wait": 45.614,
     "queue_len": 3.307,
     "deteriorated_per_100": 5.05,
@@ -1927,8 +1947,8 @@
   ]
  },
  "deployment": {
-  "median_ms_per_patient": 16.016103996662423,
-  "p95_ms_per_patient": 16.24918330926448,
+  "median_ms_per_patient": 16.391937504522502,
+  "p95_ms_per_patient": 17.16833736281842,
   "model_file_mb": 2.361732,
   "drift": [
    {
@@ -1994,5 +2014,5 @@
    }
   ]
  },
- "runtime_seconds": 89
+ "runtime_seconds": 91
 }
