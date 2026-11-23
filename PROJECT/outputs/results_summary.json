@@ -1086,7 +1086,64 @@
    "patients with a recommendation": 0.9836666666666667,
    "baseline: always the largest department": 0.236,
    "departments": 8
-  }
+  },
+  "symptom_type_subgroups": [
+   {
+    "subgroup": "symptom type",
+    "value": "bedside examination",
+    "patients": 405,
+    "share red": 0.968,
+    "red recall": 0.847,
+    "over-triage": 0.0,
+    "lookup red recall": 0.0,
+    "red patients": 392,
+    "share of all patients": 0.135
+   },
+   {
+    "subgroup": "symptom type",
+    "value": "instrument / lab / imaging",
+    "patients": 604,
+    "share red": 0.887,
+    "red recall": 0.851,
+    "over-triage": 0.048,
+    "lookup red recall": 0.0,
+    "red patients": 536,
+    "share of all patients": 0.201
+   },
+   {
+    "subgroup": "symptom type",
+    "value": "interview",
+    "patients": 1991,
+    "share red": 0.285,
+    "red recall": 0.937,
+    "over-triage": 0.442,
+    "lookup red recall": 0.604,
+    "red patients": 568,
+    "share of all patients": 0.664
+   },
+   {
+    "subgroup": "deciding symptom",
+    "value": "not revealed at desk",
+    "patients": 1458,
+    "share red": 0.791,
+    "red recall": 0.847,
+    "over-triage": 0.043,
+    "lookup red recall": 0.0,
+    "red patients": 1153,
+    "share of all patients": 0.486
+   },
+   {
+    "subgroup": "deciding symptom",
+    "value": "revealed at desk",
+    "patients": 1542,
+    "share red": 0.222,
+    "red recall": 1.0,
+    "over-triage": 0.55,
+    "lookup red recall": 1.0,
+    "red patients": 343,
+    "share of all patients": 0.514
+   }
+  ]
  },
  "queue": {
   "assumptions": {
@@ -1944,11 +2001,225 @@
     "yellow within 60 min": 0.615,
     "red within 10 min": 0.582
    }
-  ]
+  ],
+  "staffing": {
+   "assumption": "cost of one treatment place per hour s, in J units; J at w = 10",
+   "hours_per_100_patients": 19.70432098765432,
+   "break_even_s": {
+    "Lookup rule": {
+     "3->4": 1.77087103991955,
+     "4->5": 0.27429804853451406,
+     "5->6": 0.059724112984961455
+    },
+    "Risk model, by colour": {
+     "3->4": 1.6617271696243225,
+     "4->5": 0.2654900470781088,
+     "5->6": 0.0621984882265868
+    },
+    "Risk model, colour then risk": {
+     "3->4": 1.6093531867068436,
+     "4->5": 0.257234703939302,
+     "5->6": 0.056700987138996385
+    }
+   },
+   "best_places_by_s": {
+    "Lookup rule": {
+     "0": 6,
+     "0.5": 4,
+     "1": 4,
+     "2": 3,
+     "5": 3
+    },
+    "Risk model, by colour": {
+     "0": 6,
+     "0.5": 4,
+     "1": 4,
+     "2": 3,
+     "5": 3
+    },
+    "Risk model, colour then risk": {
+     "0": 6,
+     "0.5": 4,
+     "1": 4,
+     "2": 3,
+     "5": 3
+    }
+   },
+   "table": [
+    {
+     "places": 3,
+     "rule": "Lookup rule",
+     "J": 426.235,
+     "red wait (min)": 32.036,
+     "other wait (min)": 49.121,
+     "red within 10 min": 0.525,
+     "staffing hours per 100 patients": 59.113,
+     "total @ s=0": 426.235,
+     "total @ s=0.5": 455.792,
+     "total @ s=1": 485.348,
+     "total @ s=2": 544.461,
+     "total @ s=5": 721.8
+    },
+    {
+     "places": 3,
+     "rule": "Risk model, by colour",
+     "J": 129.38,
+     "red wait (min)": 28.422,
+     "other wait (min)": 55.852,
+     "red within 10 min": 0.518,
+     "staffing hours per 100 patients": 59.113,
+     "total @ s=0": 129.38,
+     "total @ s=0.5": 158.937,
+     "total @ s=1": 188.493,
+     "total @ s=2": 247.606,
+     "total @ s=5": 424.945
+    },
+    {
+     "places": 3,
+     "rule": "Risk model, colour then risk",
+     "J": 128.057,
+     "red wait (min)": 25.554,
+     "other wait (min)": 63.577,
+     "red within 10 min": 0.615,
+     "staffing hours per 100 patients": 59.113,
+     "total @ s=0": 128.057,
+     "total @ s=0.5": 157.613,
+     "total @ s=1": 187.17,
+     "total @ s=2": 246.283,
+     "total @ s=5": 423.622
+    },
+    {
+     "places": 4,
+     "rule": "Lookup rule",
+     "J": 391.342,
+     "red wait (min)": 5.44,
+     "other wait (min)": 7.633,
+     "red within 10 min": 0.84,
+     "staffing hours per 100 patients": 78.817,
+     "total @ s=0": 391.342,
+     "total @ s=0.5": 430.75,
+     "total @ s=1": 470.159,
+     "total @ s=2": 548.976,
+     "total @ s=5": 785.428
+    },
+    {
+     "places": 4,
+     "rule": "Risk model, by colour",
+     "J": 96.637,
+     "red wait (min)": 5.247,
+     "other wait (min)": 8.013,
+     "red within 10 min": 0.839,
+     "staffing hours per 100 patients": 78.817,
+     "total @ s=0": 96.637,
+     "total @ s=0.5": 136.046,
+     "total @ s=1": 175.454,
+     "total @ s=2": 254.272,
+     "total @ s=5": 490.724
+    },
+    {
+     "places": 4,
+     "rule": "Risk model, colour then risk",
+     "J": 96.346,
+     "red wait (min)": 4.807,
+     "other wait (min)": 8.757,
+     "red within 10 min": 0.866,
+     "staffing hours per 100 patients": 78.817,
+     "total @ s=0": 96.346,
+     "total @ s=0.5": 135.754,
+     "total @ s=1": 175.163,
+     "total @ s=2": 253.98,
+     "total @ s=5": 490.432
+    },
+    {
+     "places": 5,
+     "rule": "Lookup rule",
+     "J": 385.937,
+     "red wait (min)": 1.23,
+     "other wait (min)": 1.657,
+     "red within 10 min": 0.957,
+     "staffing hours per 100 patients": 98.522,
+     "total @ s=0": 385.937,
+     "total @ s=0.5": 435.197,
+     "total @ s=1": 484.458,
+     "total @ s=2": 582.98,
+     "total @ s=5": 878.545
+    },
+    {
+     "places": 5,
+     "rule": "Risk model, by colour",
+     "J": 91.406,
+     "red wait (min)": 1.294,
+     "other wait (min)": 1.623,
+     "red within 10 min": 0.954,
+     "staffing hours per 100 patients": 98.522,
+     "total @ s=0": 91.406,
+     "total @ s=0.5": 140.667,
+     "total @ s=1": 189.927,
+     "total @ s=2": 288.449,
+     "total @ s=5": 584.014
+    },
+    {
+     "places": 5,
+     "rule": "Risk model, colour then risk",
+     "J": 91.277,
+     "red wait (min)": 1.132,
+     "other wait (min)": 1.789,
+     "red within 10 min": 0.964,
+     "staffing hours per 100 patients": 98.522,
+     "total @ s=0": 91.277,
+     "total @ s=0.5": 140.538,
+     "total @ s=1": 189.799,
+     "total @ s=2": 288.32,
+     "total @ s=5": 583.885
+    },
+    {
+     "places": 6,
+     "rule": "Lookup rule",
+     "J": 384.76,
+     "red wait (min)": 0.32,
+     "other wait (min)": 0.324,
+     "red within 10 min": 0.992,
+     "staffing hours per 100 patients": 118.226,
+     "total @ s=0": 384.76,
+     "total @ s=0.5": 443.873,
+     "total @ s=1": 502.986,
+     "total @ s=2": 621.212,
+     "total @ s=5": 975.889
+    },
+    {
+     "places": 6,
+     "rule": "Risk model, by colour",
+     "J": 90.18,
+     "red wait (min)": 0.326,
+     "other wait (min)": 0.334,
+     "red within 10 min": 0.991,
+     "staffing hours per 100 patients": 118.226,
+     "total @ s=0": 90.18,
+     "total @ s=0.5": 149.293,
+     "total @ s=1": 208.406,
+     "total @ s=2": 326.632,
+     "total @ s=5": 681.31
+    },
+    {
+     "places": 6,
+     "rule": "Risk model, colour then risk",
+     "J": 90.16,
+     "red wait (min)": 0.3,
+     "other wait (min)": 0.361,
+     "red within 10 min": 0.992,
+     "staffing hours per 100 patients": 118.226,
+     "total @ s=0": 90.16,
+     "total @ s=0.5": 149.273,
+     "total @ s=1": 208.386,
+     "total @ s=2": 326.612,
+     "total @ s=5": 681.289
+    }
+   ]
+  }
  },
  "deployment": {
-  "median_ms_per_patient": 16.391937504522502,
-  "p95_ms_per_patient": 17.16833736281842,
+  "median_ms_per_patient": 16.210165980737656,
+  "p95_ms_per_patient": 16.620376738137566,
   "model_file_mb": 2.361732,
   "drift": [
    {
@@ -2014,5 +2285,5 @@
    }
   ]
  },
- "runtime_seconds": 91
+ "runtime_seconds": 89
 }
