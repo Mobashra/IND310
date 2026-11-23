@@ -3,7 +3,7 @@
  "seed": 42,
  "versions": {
   "pandas": "3.0.1",
-  "numpy": "2.1.3",
+  "numpy": "2.5.2",
   "scikit-learn": "1.8.0"
  },
  "data": {
@@ -442,9 +442,9 @@
     "auc_red": 0.8166,
     "w' at C1": 4.0,
     "red_recall at C1": 0.9065,
-    "over_triage at C1": 0.2592,
-    "red_recall (most likely colour)": 0.6172,
-    "over_triage (most likely colour)": 0.0832
+    "over_triage at C1": 0.2588,
+    "red_recall (most likely colour)": 0.6175,
+    "over_triage (most likely colour)": 0.0842
    },
    {
     "model": "Decision tree",
@@ -1868,11 +1868,67 @@
    "Risk model, by colour": 5,
    "Risk model, colour then risk": 5,
    "True colour (oracle)": 5
-  }
+  },
+  "wait_by_colour": [
+   {
+    "rule": "First come, first served",
+    "green wait": 35.493,
+    "yellow wait": 37.76,
+    "red wait": 35.613,
+    "green within 120 min": 0.953,
+    "yellow within 60 min": 0.746,
+    "red within 10 min": 0.416
+   },
+   {
+    "rule": "Keyword rule (HospitalSim)",
+    "green wait": 72.486,
+    "yellow wait": 40.338,
+    "red wait": 35.55,
+    "green within 120 min": 0.761,
+    "yellow within 60 min": 0.78,
+    "red within 10 min": 0.536
+   },
+   {
+    "rule": "Lookup rule",
+    "green wait": 109.243,
+    "yellow wait": 43.705,
+    "red wait": 32.036,
+    "green within 120 min": 0.684,
+    "yellow within 60 min": 0.796,
+    "red within 10 min": 0.525
+   },
+   {
+    "rule": "Risk model, by colour",
+    "green wait": 115.465,
+    "yellow wait": 50.883,
+    "red wait": 28.422,
+    "green within 120 min": 0.744,
+    "yellow within 60 min": 0.779,
+    "red within 10 min": 0.518
+   },
+   {
+    "rule": "Risk model, colour then risk",
+    "green wait": 123.135,
+    "yellow wait": 58.594,
+    "red wait": 25.554,
+    "green within 120 min": 0.724,
+    "yellow within 60 min": 0.772,
+    "red within 10 min": 0.615
+   },
+   {
+    "rule": "True colour (oracle)",
+    "green wait": 176.985,
+    "yellow wait": 71.179,
+    "red wait": 14.906,
+    "green within 120 min": 0.632,
+    "yellow within 60 min": 0.615,
+    "red within 10 min": 0.582
+   }
+  ]
  },
  "deployment": {
-  "median_ms_per_patient": 16.171062510693446,
-  "p95_ms_per_patient": 18.159327599278186,
+  "median_ms_per_patient": 16.016103996662423,
+  "p95_ms_per_patient": 16.24918330926448,
   "model_file_mb": 2.361732,
   "drift": [
    {
@@ -1938,5 +1994,5 @@
    }
   ]
  },
- "runtime_seconds": 96
+ "runtime_seconds": 89
 }
