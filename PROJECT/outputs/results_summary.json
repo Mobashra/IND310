@@ -2218,8 +2218,8 @@
   }
  },
  "deployment": {
-  "median_ms_per_patient": 16.210165980737656,
-  "p95_ms_per_patient": 16.620376738137566,
+  "median_ms_per_patient": 15.881770988926291,
+  "p95_ms_per_patient": 16.124829661566764,
   "model_file_mb": 2.361732,
   "drift": [
    {
